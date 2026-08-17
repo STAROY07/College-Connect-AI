@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official College Information Portal and AI Assistant for Vande Mataram Degree College (VMDC), Dombivli. Access programmes, admissions, rules, scholarships and student services.">
+  <title>{% block title %}College Connect AI | Vande Mataram Degree College{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-banner">
+  <span><strong>JMF's Vande Mataram Degree College of Arts, Commerce &amp; Science</strong> — Dombivli (W), Maharashtra</span>
+  <div class="tb-badges">
+    <span class="tb-badge">Affiliated: University of Mumbai</span>
+    <span class="tb-badge">Est. 2009</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-inner">
+
+    <!-- Brand -->
+    <a href="{{ url_for('home') }}" class="nav-brand">
+      <div class="nav-brand-icon">CC</div>
+      <div class="nav-brand-text">
+        <span class="t1">College Connect AI</span>
+        <span class="t2">Vande Mataram Degree College</span>
+      </div>
+    </a>
+
+    <!-- Search -->
+    <div class="nav-search">
+      <div class="nav-search-box">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="global-search" type="text" placeholder="Search college information..." autocomplete="off">
+      </div>
+      <div class="search-dropdown" id="search-drop"></div>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="{{ url_for('home') }}">Assistant</a></li>
+      <li><a href="{{ url_for('programmes') }}">Programmes</a></li>
+      <li><a href="{{ url_for('courses') }}">Courses</a></li>
+      <li><a href="{{ url_for('admissions') }}">Admissions</a></li>
+      <li><a href="{{ url_for('services') }}">Services</a></li>
+      <li><a href="{{ url_for('welfare') }}">Welfare &amp; Fees</a></li>
+      <li><a href="{{ url_for('kaushal') }}">Kaushal</a></li>
+      <li><a href="{{ url_for('rules') }}">Rules</a></li>
+      <li><a href="{{ url_for('updates') }}">Updates</a></li>
+      <li class="nav-admin">
+        <a href="{{ url_for('admin_redirect') }}">Admin</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- Page Body -->
+<main>
+  <div class="page-wrap">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>Vande Mataram Degree College</h4>
+      <p>Managed by Jahnvis Multi Foundation (JMF). Founded by Dr. Rajkumar Kolhe in 2009 in Dombivli (W), Thane, Maharashtra. Affiliated to the University of Mumbai.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="{{ url_for('programmes') }}">Programmes Offered</a></li>
+        <li><a href="{{ url_for('courses') }}">Course Structure</a></li>
+        <li><a href="{{ url_for('admissions') }}">Admission Guidelines</a></li>
+        <li><a href="{{ url_for('student_life') }}">Student Life &amp; NSS</a></li>
+        <li><a href="{{ url_for('kaushal') }}">Kaushal Centre</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Student Policies</h4>
+      <ul>
+        <li><a href="{{ url_for('rules') }}">Attendance &amp; Rules</a></li>
+        <li><a href="{{ url_for('admissions') }}">Fee Refund (Ord. 0.2859)</a></li>
+        <li><a href="{{ url_for('rules') }}">Library Rules &amp; Fines</a></li>
+        <li><a href="{{ url_for('rules') }}">ATKT Rules</a></li>
+        <li><a href="{{ url_for('rules') }}">Anti-Ragging Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Welfare &amp; Support</h4>
+      <ul>
+        <li><a href="{{ url_for('welfare') }}">JMF Scholarship</a></li>
+        <li><a href="{{ url_for('welfare') }}">Yuva Raksha Insurance</a></li>
+        <li><a href="{{ url_for('welfare') }}">Book Bank Scheme</a></li>
+        <li><a href="{{ url_for('welfare') }}">Startup Seed Fund</a></li>
+        <li><a href="{{ url_for('updates') }}">Latest Updates</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Vande Mataram Degree College of Arts, Commerce &amp; Science | College Connect AI &mdash; Powered by Official Handbook 2026</p>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

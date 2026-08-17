@@ -1,0 +1,271 @@
+{
+  "nss": {
+    "name": "National Service Scheme (NSS)",
+    "eligibility": "Only for degree college students.",
+    "aim": "To create social awareness among students through community engagement.",
+    "activities": [
+      "Tree plantation drives",
+      "Blood donation camps",
+      "Assisting police authorities during Ganesh festival",
+      "Educating people in neighbouring rural areas"
+    ],
+    "benefit": "Students who satisfactorily complete 120 hours of NSS work are eligible to receive 10 grace marks in college / university examination."
+  },
+  "student_council": {
+    "name": "Students' Council",
+    "role": "Organizes all cultural programmes in the college under the 'Talent Search Parade'. Functions according to University statutes.",
+    "selection_policy": "Selection of students will be on their academic excellence. There is no place for election as per University & Govt. of Maharashtra rules.",
+    "composition": [
+      "1. The Principal of the college (Chairman)",
+      "2. One Lecturer nominated by the Principal",
+      "3. N.S.S. Programme Officer",
+      "4. One student from each class who has shown academic merit in the preceding year and is engaged in full-time students' activities (nominated by Principal)",
+      "5. One student each with outstanding performance in Sports, N.S.S., and Cultural Activities",
+      "6. Two lady students nominated by the Principal",
+      "7. Secretary of the Council (selected by the student council members from amongst themselves)"
+    ]
+  },
+  "gymkhana": {
+    "name": "College Gymkhana & Sports",
+    "outdoor_sports": [
+      "Football",
+      "Handball",
+      "Volleyball",
+      "Cricket",
+      "Kabaddi",
+      "Kho-Kho",
+      "Basketball",
+      "Hockey",
+      "Ball-Badminton"
+    ],
+    "indoor_sports": [
+      "Table Tennis",
+      "Chess",
+      "Carrom"
+    ],
+    "facilities": "Well-developed outdoor grounds and modern gymnasium apparatus with fitness workout machines for health and sports development."
+  },
+  "canteen": {
+    "name": "College Canteen",
+    "type": "Pure Vegetarian Canteen facility",
+    "audience": "Students, teaching, and non-teaching staff",
+    "features": "Hygiene and quality food items at reasonable student-friendly rates, accessible during recess."
+  },
+  "job_melas": {
+    "name": "Job Melas & Campus Placements",
+    "features": "Tie-ups with leading corporate firms for on-campus interviews and Job Melas. Regular soft skill training and personality grooming sessions to prepare students for career success."
+  },
+  "cultural_and_fests": {
+    "festival_name": "PRERNOTSAV",
+    "history": "Organized annually since 2009 as an intra-collegiate cultural festival.",
+    "activities": [
+      "Painting",
+      "Rangoli",
+      "Mimicry",
+      "Music",
+      "Mehendi",
+      "Personality Contest",
+      "Singing",
+      "Cookery",
+      "Quiz",
+      "Debating",
+      "Handicraft",
+      "Acting",
+      "Elocution"
+    ],
+    "annual_celebrations": [
+      "Republic Day",
+      "Independence Day",
+      "Teachers Day",
+      "Birthdays of Eminent Indian Personalities & Leaders"
+    ]
+  },
+  "magazine": {
+    "name": "College Magazine Cum Calendar",
+    "description": "Annual publication showcasing creative writing, poems, essays, artistic achievements, and college milestones, entirely compiled and designed by Vande Mataram family members."
+  },
+  "social_work": {
+    "requirement": "Compulsory 30 hours of social work for all enrolled students.",
+    "document": "Every student signs an MOU undertaking attached to the college booklet at admission."
+  },
+  "open_ncc": {
+    "name": "Open National Cadet Corps (NCC)",
+    "policy": "Students are given official permission and rights to join open N.C.C. training battalions conducted by outside colleges."
+  },
+  "distinctive_features": {
+    "alumni_association": "Registered Alumni Association (Registration No. MAH/1326/2018/THANE) conducting regular reunions and mentorship sessions with juniors.",
+    "parent_teacher_meet": "Periodic PTM meetings to review academic growth, attendance, and student conduct with concerned teachers.",
+    "excursions": "Excursions at prime locations twice a year for Life Science students, plus annual industrial visits and study tours for all faculties.",
+    "workshops_and_seminars": "Conducted on Personality Development, Stress Management, Time Management, and Emerging Technologies.",
+    "guest_lectures": "Eminent scholars and industry experts invited to update students with recent technological and academic advancements."
+  },
+  "academic_committees": [
+    "Examination Committee",
+    "Results Committee",
+    "Attendance Committee",
+    "NAAC Core Committee",
+    "ISO Committee",
+    "Parents-Teachers Association",
+    "Cultural Committee",
+    "VMDC Kaushal Committee",
+    "Sports & First Aid Committee",
+    "Workshops & Seminars Committee",
+    "University Circular Committee",
+    "Students' Council",
+    "Staff Welfare Committee",
+    "Library Committee",
+    "Women Development Cell",
+    "Magazine/Publicity Committee",
+    "NSS Advisory Committee",
+    "Time Table Committee",
+    "Discipline Committee",
+    "NSS Committee",
+    "Counseling Cell",
+    "Alumni Association",
+    "Notice Board Committee",
+    "Adoption Committee",
+    "Admission Committee",
+    "Career Guidance, Placement & Internship Committee",
+    "Finance Committee",
+    "College Development Committee (CDC)",
+    "B'day Celebration of Students",
+    "Feedback Committee",
+    "Grievance Redressal Committee",
+    "Research & Development Committee",
+    "Anti Ragging Committee",
+    "Right to Info (RTI) Committee",
+    "Website Update (Report & Photo) Cultural Activities",
+    "Happy Club",
+    "Arts Association",
+    "Commerce Association",
+    "Science Association",
+    "Scholarship Committee",
+    "Internal Quality Assurance Cell (IQAC)",
+    "Committee for SC/ST",
+    "Internal Complaints Committee",
+    "Gender Sensitisation & Women Development Cell",
+    "OBC Cell"
+  ],
+  "national_and_international_days": [
+    {
+      "sr": 1,
+      "day": "Global Day of Parents",
+      "date": "1st June"
+    },
+    {
+      "sr": 2,
+      "day": "World Environment Day",
+      "date": "5th June"
+    },
+    {
+      "sr": 3,
+      "day": "World Fathers Day",
+      "date": "19th June"
+    },
+    {
+      "sr": 4,
+      "day": "International Yoga Day",
+      "date": "21st June"
+    },
+    {
+      "sr": 5,
+      "day": "World Chocolate Day",
+      "date": "7th July"
+    },
+    {
+      "sr": 6,
+      "day": "World Population Day",
+      "date": "11th July"
+    },
+    {
+      "sr": 7,
+      "day": "World Nature Conservation Day",
+      "date": "28th July"
+    },
+    {
+      "sr": 8,
+      "day": "Friendship Day",
+      "date": "6th Aug"
+    },
+    {
+      "sr": 9,
+      "day": "Daughter and Son Day",
+      "date": "11th Aug"
+    },
+    {
+      "sr": 10,
+      "day": "International Youth Day",
+      "date": "12th Aug"
+    },
+    {
+      "sr": 11,
+      "day": "International Photography Day",
+      "date": "19th Aug"
+    },
+    {
+      "sr": 12,
+      "day": "World Literacy Day",
+      "date": "8th Sept"
+    },
+    {
+      "sr": 13,
+      "day": "World Vegetarian Day / International Day of Older/Elderly",
+      "date": "1st Oct"
+    },
+    {
+      "sr": 14,
+      "day": "Global Hand-wash Day & International Day of Rural Women",
+      "date": "15th Oct"
+    },
+    {
+      "sr": 15,
+      "day": "World Food Day",
+      "date": "16th Oct"
+    },
+    {
+      "sr": 16,
+      "day": "International AIDS Day",
+      "date": "1st Dec"
+    },
+    {
+      "sr": 17,
+      "day": "Human Rights Day",
+      "date": "10th Dec"
+    },
+    {
+      "sr": 18,
+      "day": "National Farmers Day",
+      "date": "23rd Dec"
+    },
+    {
+      "sr": 19,
+      "day": "National Youth Day (Swami Vivekananda Birthday)",
+      "date": "12th Jan"
+    },
+    {
+      "sr": 20,
+      "day": "National Girl Child Day of India",
+      "date": "24th Jan"
+    },
+    {
+      "sr": 21,
+      "day": "National Science Day",
+      "date": "28th Feb"
+    },
+    {
+      "sr": 22,
+      "day": "World Health Day",
+      "date": "3rd March"
+    },
+    {
+      "sr": 23,
+      "day": "JMF Vegan Life Pledge Day / Gurukul Day",
+      "date": "21st March"
+    },
+    {
+      "sr": 24,
+      "day": "Mother's Day",
+      "date": "14th May"
+    }
+  ]
+}

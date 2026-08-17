@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}College Rules & Attendance | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>College Rules & Regulations</h2>
+  <p>Official code of conduct, attendance ordinance, library fines, and ATKT progression criteria</p>
+</div>
+
+<!-- Attendance & Timing Grid -->
+<div class="grid-2" style="margin-bottom: 28px;">
+  <!-- Attendance Policy -->
+  <div class="card" style="border-top: 4px solid var(--accent);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">📅 Mandatory Attendance (75%)</h3>
+      <span class="badge badge-primary">Ordinance O. 6086</span>
+    </div>
+    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;"><strong>{{ rules.attendance.ordinance }}:</strong> {{ rules.attendance.requirement }}</p>
+    <div style="background: var(--bg-subtle); padding: 12px; border-radius: var(--radius-md); font-size: 13px; color: var(--text-secondary);">
+      ⚠️ <strong>Bunking Policy:</strong> {{ rules.attendance.bunking_policy }}
+    </div>
+  </div>
+
+  <!-- Timing & Discipline Highlights -->
+  <div class="card" style="border-top: 4px solid var(--primary-dark);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">⏰ College Timing & ID Mandatory</h3>
+      <span class="badge badge-warning">Principal Discretion</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">{{ rules.college_timing }}</p>
+    <div style="background: var(--bg-subtle); padding: 12px; border-radius: var(--radius-md); font-size: 13px; color: var(--text-secondary); line-height: 1.5;">
+      📌 <strong>Campus Entry Rule:</strong> No student can enter into the College Campus without Notebook, Pen, Proper Handbook, and valid College Identity Card (ID).
+    </div>
+  </div>
+</div>
+
+<!-- Code of Conduct & Discipline List -->
+<div class="card" style="margin-bottom: 28px;">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">⚖️ Discipline & Code of Conduct</h3>
+    <span class="badge badge-primary">Section 3.8 Handbook</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+    {% for d in rules.discipline_and_code_of_conduct %}
+    <div style="background: var(--bg-subtle); padding: 10px 14px; border-radius: var(--radius-md); font-size: 13px; color: var(--text-secondary); display: flex; gap: 8px;">
+      <span style="color: var(--primary-light); font-weight: 700;">•</span>
+      <span>{{ d }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Library Rules Card -->
+<div class="card" id="library" style="margin-bottom: 28px;">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">📚 Library Rules & Fines</h3>
+    <span class="badge badge-gold">Section 3.9 Handbook</span>
+  </div>
+
+  <div class="grid-2" style="gap: 16px;">
+    <div>
+      <h4 style="font-size: 14px; color: var(--primary-dark); margin-bottom: 8px;">General & Reading Room Rules:</h4>
+      <ul style="margin-left: 18px; font-size: 13px; color: var(--text-secondary); display: flex; flex-direction: column; gap: 6px;">
+        {% for r in rules.library_rules.general[:5] %}
+        <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 14px; color: var(--primary-dark); margin-bottom: 8px;">Home Issue & Overdue Fines:</h4>
+      <div style="background: var(--bg-subtle); padding: 12px; border-radius: var(--radius-md); font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+        {% for h in rules.library_rules.home_issue_rules %}
+        <p style="margin-bottom: 6px;">• {{ h }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Allowed to Keep Terms (ATKT) Rules -->
+<div class="card" id="atkt">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">{{ rules.atkt_rules.title }}</h3>
+    <span class="badge badge-success">University Progression</span>
+  </div>
+
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Progression Term</th>
+          <th>Eligibility & ATKT Condition</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in rules.atkt_rules.progression %}
+        <tr>
+          <td style="font-weight: 700; color: var(--primary-dark);">{{ a.to_semester }}</td>
+          <td style="font-size: 13px; color: var(--text-secondary);">{{ a.condition }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

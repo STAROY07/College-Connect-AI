@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Student Services & Extensions | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>Student Extension Services</h2>
+  <p>Official administrative desk services with committed processing times directly from the handbook</p>
+</div>
+
+<!-- Highlight Service: Railway Concession & Bonafide -->
+<div class="grid-2" style="margin-bottom: 28px;">
+  <!-- Railway Concession -->
+  <div class="card" style="border-top: 4px solid var(--accent);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">🚆 Railway Concession</h3>
+      <span class="badge badge-primary">Turnaround: 05 mins</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Bonafide students below 25 years of age are eligible for railway season ticket concessions between the station nearest to their home and Kopar station.</p>
+    
+    <div style="background: var(--bg-subtle); padding: 12px; border-radius: var(--radius-md); font-size: 13px; margin-bottom: 12px;">
+      <strong>Documents Required:</strong>
+      <ul style="margin-left: 18px; margin-top: 4px;">
+        <li>Prescribed application form with Name, Address, Class, Roll No., DOB</li>
+        <li>Attested photocopy of Ration Card or valid residence proof</li>
+        <li>Submission between recess & after lectures on working days</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bonafide Certificate -->
+  <div class="card" style="border-top: 4px solid var(--primary-light);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">📄 Bonafide Certificate</h3>
+      <span class="badge badge-primary">Turnaround: 05 mins</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Official institutional certificate for educational and administrative verifications.</p>
+    
+    <div style="background: var(--bg-subtle); padding: 12px; border-radius: var(--radius-md); font-size: 13px; margin-bottom: 12px;">
+      <strong>Requirements:</strong>
+      <ul style="margin-left: 18px; margin-top: 4px;">
+        <li><strong>Regular Students:</strong> Application with Name, Address, Class, Roll No, DOB, Academic Year (e.g. 2024-25)</li>
+        <li><strong>Repeater Students:</strong> Application + Attested photocopy of last year's mark sheet</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Complete 24 Extension Services Directory -->
+<div class="card">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">Extension Services Directory (24 Counter Services)</h3>
+    <span class="badge badge-success">Section 8 Handbook</span>
+  </div>
+
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.</th>
+          <th>Service Name</th>
+          <th>Processing Time</th>
+          <th>Key Description / Requirements</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in services %}
+        <tr id="{{ s.id }}">
+          <td>{{ loop.index }}</td>
+          <td><strong>{{ s.name }}</strong></td>
+          <td><span class="badge badge-primary">{{ s.time_minutes }}</span></td>
+          <td style="font-size: 13px; color: var(--text-secondary);">
+            {{ s.description }}
+            {% if s.documents_required %}
+            <div style="margin-top: 4px; font-size: 12px; color: var(--text-muted);">
+              <strong>Requirements:</strong> {{ s.documents_required | join(', ') }}
+            </div>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

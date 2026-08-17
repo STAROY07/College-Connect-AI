@@ -1,0 +1,164 @@
+{
+  "services": [
+    {
+      "id": "railway_concession",
+      "name": "Railway Concession",
+      "time_minutes": "05 mins",
+      "eligibility": "Bonafide students below 25 years of age.",
+      "description": "Provides season ticket concession between the student's nearest residence station and Kopar station. Long journey concession is granted during vacation as per railway rules (office info up to 3:00 PM).",
+      "documents_required": [
+        "Prescribed Application Form",
+        "Student's Full Name, Address, Class, Roll Number, Date of Birth",
+        "Attested photocopy of Ration Card or valid residential proof",
+        "Submission time: Between recess & after lectures on working days in office"
+      ]
+    },
+    {
+      "id": "bonafide_certificate",
+      "name": "Bonafide Certificate",
+      "time_minutes": "05 mins",
+      "description": "Official college certificate certifying student enrollment status.",
+      "documents_required": [
+        "For Regular Students: Application with Student's Full Name, Address, Class, Roll Number, Date of Birth, Academic Year (e.g. 2024-25)",
+        "For Repeater Students: Application + Attested photocopy of last year's mark sheet"
+      ]
+    },
+    {
+      "id": "fees_receipt",
+      "name": "Fees Receipt",
+      "time_minutes": "05 mins",
+      "description": "Official receipt of college tuition and administrative fee payments."
+    },
+    {
+      "id": "noc",
+      "name": "No Objection Certificate (N.O.C.)",
+      "time_minutes": "After Clearances",
+      "description": "Issued for admission transfer or external examinations upon obtaining clearances.",
+      "documents_required": [
+        "Application with Full Name, Address, Class, Roll Number, Date of Birth, Programme studied",
+        "Attested photocopy of last year's mark sheet",
+        "'No Dues' remark from Library, Laboratory, and Accounts section"
+      ]
+    },
+    {
+      "id": "transfer_certificate",
+      "name": "Transfer Certificate (T.C.)",
+      "time_minutes": "15 mins",
+      "description": "Issued when a student transitions to another affiliated college or university."
+    },
+    {
+      "id": "marksheet_issue",
+      "name": "Mark Sheet Issue",
+      "time_minutes": "15 mins",
+      "description": "Distribution and issuance of official semester grade cards and mark sheets."
+    },
+    {
+      "id": "photocopy_marksheet",
+      "name": "Photocopy (Xerox) of Mark Sheet",
+      "time_minutes": "03 mins",
+      "description": "Official reprographic copy services for examination records."
+    },
+    {
+      "id": "leaving_certificate",
+      "name": "Leaving Certificate (L.C.)",
+      "time_minutes": "03 mins",
+      "description": "Formal institutional departure certificate upon course completion or withdrawal."
+    },
+    {
+      "id": "correspondence_documents",
+      "name": "All Letters and Correspondence Documents",
+      "time_minutes": "15 mins",
+      "description": "Official verification letters, character certificates, and formal institutional correspondence."
+    },
+    {
+      "id": "convocation_certificate",
+      "name": "Convocation Certificate",
+      "time_minutes": "10 mins",
+      "description": "Issuance and verification of University degree certificates."
+    },
+    {
+      "id": "online_form_filling",
+      "name": "All Online Form Filling (Admission & Scholarship)",
+      "time_minutes": "30 mins",
+      "description": "Guided assistance at college counter for university portal admission and government scholarship applications."
+    },
+    {
+      "id": "principal_appointment",
+      "name": "Principal's Appointment for Meeting on Any Valid Point",
+      "time_minutes": "05 mins",
+      "description": "Direct appointment scheduling with the Hon. Principal for academic or administrative matters."
+    },
+    {
+      "id": "marksheet_verification",
+      "name": "Mark Sheet Verification & Admission Confirmation",
+      "time_minutes": "05 mins",
+      "description": "Document authentication and official confirmation of admission."
+    },
+    {
+      "id": "fees_installments",
+      "name": "Fees and Installments Information",
+      "time_minutes": "02 mins",
+      "description": "Inquiry desk for fee schedules, payment milestones, and installment plans."
+    },
+    {
+      "id": "principal_management_interaction",
+      "name": "Interaction between Principal and Management",
+      "time_minutes": "ZERO (Immediate)",
+      "description": "Streamlined administrative escalation directly between Principal and College Management."
+    },
+    {
+      "id": "teacher_appointment",
+      "name": "Teachers Appointments for Clarifications",
+      "time_minutes": "05 mins",
+      "description": "Subject counseling and academic doubt clearing with faculty members."
+    },
+    {
+      "id": "event_approvals",
+      "name": "Approval's and Permission's for Events",
+      "time_minutes": "05 mins",
+      "description": "Administrative clearance for student festivals, cultural competitions, and workshops."
+    },
+    {
+      "id": "lab_support",
+      "name": "Technical Support on Laboratory Issues",
+      "time_minutes": "05 mins",
+      "description": "On-demand troubleshooting for science and computing laboratory equipment."
+    },
+    {
+      "id": "reevaluation_services",
+      "name": "Re-evaluation Services and Documentation",
+      "time_minutes": "05 mins",
+      "description": "Verification of marks and photocopy/re-evaluation form submissions."
+    },
+    {
+      "id": "caste_certificate_check",
+      "name": "Caste Certificate Checking",
+      "time_minutes": "05 mins",
+      "description": "Scrutiny and validation of caste certificates and validity certificates."
+    },
+    {
+      "id": "certificate_attestation",
+      "name": "Attestation of Certificates",
+      "time_minutes": "05 mins",
+      "description": "Official institutional attestation on educational documents."
+    },
+    {
+      "id": "library_requests",
+      "name": "Request for Library Resources",
+      "time_minutes": "05 mins",
+      "description": "Requisition for new titles, reference volumes, research journals, and e-resources."
+    },
+    {
+      "id": "university_queries",
+      "name": "Queries with respect to University Issues",
+      "time_minutes": "Variable",
+      "description": "Assistance and resolution of Mumbai University portal, PRN, or exam eligibility matters."
+    },
+    {
+      "id": "urgent_matters",
+      "name": "Anything Which Requires Immediate Attention",
+      "time_minutes": "Variable",
+      "description": "Emergency escalation cell for urgent student and parent inquiries."
+    }
+  ]
+}

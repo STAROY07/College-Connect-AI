@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block title %}College Connect AI — Your Smart College Information Assistant{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<div class="hero-banner">
+  <div class="hero-banner-inner">
+    <div>
+      <h2>🎓 Welcome to College Connect AI</h2>
+      <p>Your official AI-powered assistant for Vande Mataram Degree College.<br>
+         Instant answers on programmes, admissions, fees, scholarships, rules, and more.</p>
+      <div class="hero-actions">
+        <a href="{{ url_for('programmes') }}" class="hero-btn-white">View Programmes</a>
+        <a href="{{ url_for('admissions') }}" class="hero-btn-ghost">Admission Info</a>
+      </div>
+    </div>
+    <div style="text-align:right;flex-shrink:0;">
+      <div style="background:rgba(255,255,255,0.12);border-radius:14px;padding:16px 20px;display:inline-block;">
+        <div style="font-size:28px;font-weight:800;line-height:1;">{{ ug_count + pg_count + aicte_count }}+</div>
+        <div style="font-size:12px;opacity:0.85;margin-top:2px;">Programmes Offered</div>
+        <div style="margin-top:10px;display:flex;gap:10px;font-size:12px;">
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;">{{ ug_count }}</div><div style="opacity:0.8;">UG</div></div>
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;">{{ pg_count }}</div><div style="opacity:0.8;">PG</div></div>
+          <div style="text-align:center;"><div style="font-size:18px;font-weight:700;">{{ aicte_count }}</div><div style="opacity:0.8;">AICTE</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Row -->
+<div class="grid-4" style="margin-bottom:24px;">
+  <div class="stat-card">
+    <div class="stat-icon stat-icon-blue">📚</div>
+    <div class="stat-info">
+      <div class="stat-val">{{ ug_count }}</div>
+      <div class="stat-lbl">UG Programmes</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon stat-icon-green">🎓</div>
+    <div class="stat-info">
+      <div class="stat-val">{{ pg_count }}</div>
+      <div class="stat-lbl">PG Programmes</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon stat-icon-gold">⚙️</div>
+    <div class="stat-info">
+      <div class="stat-val">{{ aicte_count }}</div>
+      <div class="stat-lbl">AICTE Programmes</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon stat-icon-purple">🏫</div>
+    <div class="stat-info">
+      <div class="stat-val">2009</div>
+      <div class="stat-lbl">Established</div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat + Sidebar -->
+<div class="chat-layout">
+
+  <!-- Chat Card -->
+  <div class="chat-card">
+    <div class="chat-hd">
+      <div class="chat-hd-left">
+        <div class="chat-hd-avatar">🤖</div>
+        <div>
+          <div class="chat-hd-title">College Connect AI</div>
+          <div class="chat-hd-status"><span class="status-dot"></span>Online — Vande Mataram Degree College</div>
+        </div>
+      </div>
+      <div class="chat-hd-right">
+        <button class="btn-clear" id="chat-clear">Clear Chat</button>
+      </div>
+    </div>
+
+    <!-- Quick Chips -->
+    <div class="quick-bar">
+      <button class="quick-chip" data-query="What courses does the college offer?">📋 Courses</button>
+      <button class="quick-chip" data-query="Admission process and eligibility">📝 Admissions</button>
+      <button class="quick-chip" data-query="Scholarships and freeship available">💰 Scholarships</button>
+      <button class="quick-chip" data-query="Hostel and canteen facilities">🏨 Facilities</button>
+      <button class="quick-chip" data-query="Attendance rules and requirements">📊 Attendance</button>
+      <button class="quick-chip" data-query="Kaushal Vikas Centre courses">🛠️ Kaushal</button>
+      <button class="quick-chip" data-query="Documents required for admission">📄 Documents</button>
+      <button class="quick-chip" data-query="Fee refund policy">💳 Fees</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="messages-area" id="chat-messages">
+      <div class="msg-row bot-row">
+        <div class="bubble">
+          <p>👋 <strong>Welcome to College Connect AI!</strong></p>
+          <p>I'm your official information assistant for <strong>Vande Mataram Degree College</strong>. I can help you with:</p>
+          <p>📚 Programmes &amp; Courses &nbsp;|&nbsp; 📝 Admissions &amp; Eligibility<br>
+             💰 Scholarships &amp; Fees &nbsp;|&nbsp; 🏫 Campus Services &amp; Rules</p>
+          <p>What would you like to know?</p>
+          <div class="bot-suggests">
+            <button class="sug-btn" data-q="What UG programmes are available?">UG Programmes</button>
+            <button class="sug-btn" data-q="How to apply for admission?">Apply for Admission</button>
+            <button class="sug-btn" data-q="Scholarship information">Scholarships</button>
+            <button class="sug-btn" data-q="What are the college timings?">College Timings</button>
+          </div>
+        </div>
+        <div class="msg-meta">College Connect AI</div>
+      </div>
+      <!-- Typing -->
+      <div class="msg-row bot-row typing-row" id="typing-indicator">
+        <div class="typing-bubble">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input-area">
+      <textarea id="chat-input" class="chat-textarea" rows="1"
+        placeholder="Ask anything about Vande Mataram Degree College..."></textarea>
+      <button id="chat-send" class="btn-send">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+        Send
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="chat-sidebar">
+
+    <!-- Latest Updates -->
+    <div class="widget">
+      <div class="widget-hd">📢 Latest Updates</div>
+      {% if updates %}
+        {% for upd in updates %}
+        <div class="ann-item">
+          <div class="ann-title">{{ upd.title }}</div>
+          <div class="ann-date">{{ upd.date_added or upd.last_updated or '' }}{% if upd.category %} &bull; {{ upd.category }}{% endif %}</div>
+          <div class="ann-snip">{{ upd.content[:90] }}{% if upd.content|length > 90 %}…{% endif %}</div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p style="font-size:13px;color:var(--text-muted);">No updates at this time.</p>
+      {% endif %}
+      <a href="{{ url_for('updates') }}" style="font-size:12px;font-weight:600;color:var(--accent);margin-top:8px;display:block;">View all updates →</a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="widget">
+      <div class="widget-hd">🔗 Quick Links</div>
+      <ul class="svc-list">
+        <li><span>Office Hours</span><span class="svc-time">Mon–Sat 9–5</span></li>
+        <li><span>Library</span><span class="svc-time">9 AM – 6 PM</span></li>
+        <li><span>Kaushal Centre</span><span class="svc-time">10 AM – 5 PM</span></li>
+        <li><span>Admission Office</span><span class="svc-time">10 AM – 4 PM</span></li>
+      </ul>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:6px;">
+        <a href="{{ url_for('programmes') }}" class="btn btn-primary btn-sm btn-block">View All Programmes</a>
+        <a href="{{ url_for('admissions') }}" class="btn btn-outline btn-sm btn-block">Admission Guidelines</a>
+        <a href="{{ url_for('welfare') }}" class="btn btn-outline btn-sm btn-block">Scholarships & Welfare</a>
+      </div>
+    </div>
+
+    <!-- FAQ Preview -->
+    <div class="widget">
+      <div class="widget-hd">❓ Common Questions</div>
+      {% for faq in faqs %}
+      <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border);">
+        <div style="font-size:12px;font-weight:600;color:var(--text-head);margin-bottom:3px;cursor:pointer;"
+             onclick="document.getElementById('chat-input').value='{{ faq.question }}'; document.getElementById('chat-input').focus();">
+          {{ faq.question }}
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);">Click to ask the AI →</div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </aside>
+</div>
+
+{% endblock %}

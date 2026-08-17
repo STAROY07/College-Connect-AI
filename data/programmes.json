@@ -1,0 +1,190 @@
+{
+  "ug_programmes": [
+    {
+      "id": "ba",
+      "name": "B.A. (Bachelor of Arts)",
+      "specializations": ["History", "Economics", "English Literature"],
+      "medium": "English / Marathi Medium",
+      "seats": 60,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) examination conducted by Maharashtra State Board or any equivalent examination recognized by University of Mumbai.",
+      "description": "Comprehensive humanities programme offering deep foundations in History, Economics, English Literature, Geography, Psychology, and Indian Knowledge Systems."
+    },
+    {
+      "id": "ba_ftvnmp",
+      "name": "B.A. : Film, TV & New Media Production",
+      "specializations": ["Film Making", "Television Production", "New Media & Digital Content"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in any stream (Arts/Commerce/Science) from Maharashtra State Board or equivalent.",
+      "description": "Creative professional degree covering scriptwriting, cinematography, editing, TV production, and digital media dynamics."
+    },
+    {
+      "id": "ba_mmc",
+      "name": "B.A. : Multimedia & Mass Communication (BAMMC)",
+      "specializations": ["Journalism", "Advertising", "Public Relations", "Digital Media"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in any stream with minimum passing percentage as per University of Mumbai.",
+      "description": "Prepares students for dynamic careers in journalism, advertising, public relations, mass communication, and media production."
+    },
+    {
+      "id": "bcom",
+      "name": "B.Com. (Bachelor of Commerce)",
+      "specializations": ["Advanced Accountancy", "Business Economics", "Commerce & Business Law"],
+      "seats": 360,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Commerce or equivalent examination.",
+      "description": "Flagship commerce degree covering financial management, auditing, taxation, marketing, business law, and modern accountancy practices."
+    },
+    {
+      "id": "bcom_bi",
+      "name": "B.Com. : Banking & Insurance",
+      "specializations": ["Banking Operations", "Insurance Management", "Financial Services"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Commerce / Science / Arts with required aggregate as per University guidelines.",
+      "description": "Specialized degree focusing on modern banking systems, risk assessment, life & general insurance, and financial regulations."
+    },
+    {
+      "id": "bcom_tm",
+      "name": "B.Com. : Transport Management",
+      "specializations": ["Logistics", "Supply Chain", "Transport Operations"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) examination in any stream.",
+      "description": "Niche programme equipping students with operational and administrative skills for multimodal transportation and global supply chain networks."
+    },
+    {
+      "id": "bcom_fm",
+      "name": "B.Com. : Financial Management",
+      "specializations": ["Corporate Finance", "Investment Analysis", "Wealth Management"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Commerce or equivalent.",
+      "description": "Deep focus on capital markets, portfolio management, financial statement analysis, and managerial economics."
+    },
+    {
+      "id": "baf",
+      "name": "B.Com. : Accounting & Finance (B.A.F.)",
+      "specializations": ["Financial Accounting", "Auditing", "Cost Accounting", "Direct & Indirect Tax"],
+      "seats": 60,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Commerce or equivalent with required minimum marks.",
+      "description": "Intensive professional training in auditing, advanced financial accounting, direct/indirect taxation, and corporate governance."
+    },
+    {
+      "id": "bms",
+      "name": "B.M.S. (Bachelor of Management Studies)",
+      "specializations": ["Finance", "Marketing", "Human Resource (HR)"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in any discipline with minimum required aggregate marks.",
+      "description": "Premium management programme building leadership, strategic decision-making, organizational behaviour, and specialized domain expertise."
+    },
+    {
+      "id": "bsc_general",
+      "name": "B.Sc. (Bachelor of Science - General)",
+      "specializations": ["Chemistry", "Botany", "Zoology"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Science stream with Chemistry, Biology / Mathematics as required.",
+      "description": "Pure sciences degree with well-equipped laboratory training in Botany, Zoology, Physics, and Inorganic/Organic Chemistry."
+    },
+    {
+      "id": "bsc_cs",
+      "name": "B.Sc. : Computer Science (B.Sc. CS)",
+      "specializations": ["Software Development", "Cyber Security", "Web Technology", "Open Source Systems"],
+      "seats": 60,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) Science examination with Mathematics as one of the subjects from Maharashtra State Board or equivalent.",
+      "description": "Comprehensive technical computing degree covering open source technologies, web development, cyber and digital safety, system programming, algorithms, and applied software engineering."
+    },
+    {
+      "id": "bsc_it",
+      "name": "B.Sc. : Information Technology (B.Sc. IT)",
+      "specializations": ["Web Designing", "Data Science", "Networking", "Database Systems", "PHP & .NET"],
+      "seats": 120,
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) examination with Mathematics as a mandatory subject, securing minimum passing marks as per University rules.",
+      "description": "Industry-aligned IT degree covering computer fundamentals, Google Workspace, PHP and .NET Core, Web Design, Data Analytics with Excel, Data Science, and Modern Networking."
+    }
+  ],
+  "pg_programmes": [
+    {
+      "id": "ma_history",
+      "name": "M.A. : History",
+      "specializations": ["Indian National Movement", "Maratha History", "Philosophy of History", "Modern World"],
+      "seats": 60,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "duration": "2 Years (4 Semesters)",
+      "eligibility": "Bachelor's Degree (B.A.) in History or related Humanities from a recognized university.",
+      "description": "Advanced postgraduate study in historical historiography, Maratha socio-economic history, Indian Constitution, and emancipatory modern world movements."
+    },
+    {
+      "id": "mcom_accountancy",
+      "name": "M.Com. : Advanced Accountancy",
+      "specializations": ["Advanced Cost Accounting", "Corporate Finance", "Direct & Indirect Tax (GST)", "International Financial Reporting"],
+      "seats": 60,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "duration": "2 Years (4 Semesters)",
+      "eligibility": "B.Com, B.A.F., B.B.I., or equivalent commerce undergraduate degree from a recognized university.",
+      "description": "Postgraduate specialization covering advanced auditing, wealth management, corporate financial accounting, and operations research."
+    },
+    {
+      "id": "msc_it",
+      "name": "M.Sc. : Information Technology (M.Sc. IT)",
+      "specializations": ["Data Science", "Cloud Computing", "AI & Machine Learning", "Blockchain", "Cyber Forensics"],
+      "seats": 20,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "duration": "2 Years (4 Semesters)",
+      "eligibility": "B.Sc. IT / B.Sc. CS / B.C.A. / B.Sc. Mathematics/Statistics with required minimum percentage.",
+      "description": "Advanced master's degree exploring cutting-edge computing paradigms: Data Science, Soft Computing, Image Processing, Modern Networking, Microservices, Deep Learning, and Cyber Forensics."
+    },
+    {
+      "id": "msc_chemistry",
+      "name": "M.Sc. : Organic Chemistry",
+      "specializations": ["Inorganic Chemistry", "Synthetic Organic Chemistry", "Spectroscopy", "Biogenesis & Green Chemistry"],
+      "seats": 20,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "duration": "2 Years (4 Semesters)",
+      "eligibility": "B.Sc. with Chemistry as principal subject from a recognized university.",
+      "description": "Rigorous postgraduate degree with advanced chemical laboratories, analytical research projects, and industrial field training."
+    }
+  ],
+  "aicte_programmes": [
+    {
+      "id": "bca",
+      "name": "Bachelor of Computer Applications (B.C.A.)",
+      "approval": "AICTE Approved Programme",
+      "seats": 60,
+      "pattern": "100 Marks (75:25 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in any stream with Mathematics/Statistics or equivalent as per AICTE and University norms.",
+      "description": "AICTE-approved computer applications degree emphasizing practical software engineering, Java, C++, Python, Unix, Oracle, Algorithms, Cloud Computing, and Mobile UI/UX."
+    },
+    {
+      "id": "bba",
+      "name": "Bachelor of Business Administration (B.B.A.)",
+      "approval": "AICTE Approved Programme",
+      "seats": 60,
+      "pattern": "100 Marks (75:25 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in any stream with minimum passing aggregate as prescribed by AICTE / University.",
+      "description": "AICTE-approved business administration curriculum focusing on entrepreneurship, startup ecosystems, operations management, corporate governance, and design thinking."
+    },
+    {
+      "id": "bms_aicte",
+      "name": "Bachelor of Management Studies (B.M.S. - AICTE)",
+      "approval": "AICTE Approved Programme",
+      "seats": 60,
+      "pattern": "100 Marks (75:25 Pattern)",
+      "duration": "3 Years (6 Semesters)",
+      "eligibility": "Passed 12th Std (H.S.C.) in Arts, Science, or Commerce stream.",
+      "description": "AICTE-aligned managerial leadership programme covering strategic management, logistics, and organizational excellence."
+    }
+  ]
+}

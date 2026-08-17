@@ -1,0 +1,108 @@
+{
+  "general_schedule": "Admissions are held from May to July every year. Students are advised to refer to notifications by University of Mumbai regarding the schedule of admissions.",
+  "committee_info": "The Admission Committee is responsible for UG and PG student admissions. If any false attestation or falsified records are detected, the student's admission will be cancelled, and criminal action under relevant sections of IPC (viz. 470, 471, 474 IPC) will be instituted.",
+  "first_year_eligibility": {
+    "criteria": "Students should have passed the H.S.C. (12th Standard) examination conducted by the Maharashtra State Board of Secondary and Higher Secondary Education or any examination recognized as equivalent to H.S.C. Students of Jahnvis Multi Foundation Trust School will be given preference.",
+    "procedure": "Application for admission must be made on the prescribed printed form. Students who are granted admission must pay fees on the same day failing which they will have 'NO CLAIM' to the seat. A student who is granted admission must pay fees for the whole year even if he/she subsequently leaves the college or if his/her name is struck off the college roll.",
+    "documents_required": [
+      "Aadhar Card | PAN Card | Caste Certificate (if applicable)",
+      "S.S.C. (10th) Mark Sheet - 3 attested photocopies",
+      "Original H.S.C. (12th) Mark Sheet + 3 attested photocopies",
+      "Original Leaving Certificate (L.C.) + 2 attested photocopies",
+      "Students passing as Private Candidate: Original Private Candidate Certificate + 2 attested photocopies",
+      "If there is any gap in academics: Original 'Gap Certificate' + 1 photocopy attached to admission form",
+      "Students passing H.S.C. from other than Maharashtra State: Transfer Certificate from University of Mumbai, Original H.S.C. Mark sheet, Original Migration Certificate + 2 attested photocopies",
+      "2 Passport Size & 4 Stamp Size latest photographs",
+      "Group Insurance Form duly filled up at the time of admission",
+      "F.Y.B.Com / F.Y.B.A / F.Y.B.Sc Enrollment Form duly filled up within four days from date of admission",
+      "Board Certificate along with 2 attested photocopies submitted before 24th December"
+    ]
+  },
+  "students_from_other_colleges": {
+    "rules": [
+      "Original copy of No Objection Certificate (NOC) from college concerned along with its photocopy & Transfer Certificate (T.C.)",
+      "Last year's Original Mark Sheet + 2 attested photocopies",
+      "If there is any academic gap, 'Gap Certificate' is required with admission form and photocopy",
+      "N.B.: FAILURE STUDENTS WILL NOT BE ADMITTED IN THE SAME CLASS FOR NEXT ACADEMIC YEAR."
+    ]
+  },
+  "postgraduate_admissions": {
+    "documents_required": [
+      "Original H.S.C. Mark Sheet",
+      "UG Original Mark Sheet and Passing Certificate + attested photocopies",
+      "Transfer / Migration Certificate where applicable"
+    ]
+  },
+  "scholarship_freeship_documents": {
+    "categories": "Available to students belonging to SC / ST / OBC / VJ / NT / SBC / EBC",
+    "documents_required": [
+      "Copy of Caste Certificate",
+      "S.S.C. / H.S.C. Mark Sheets",
+      "Current Year Mark Sheet",
+      "Domicile Certificate",
+      "Income Certificate certified by the Tehsildar (awarded only till 3rd child in a family)",
+      "Non-Creamy Layer Certificate (where applicable)",
+      "PAN Card and Aadhar Card",
+      "Fee Receipts and Bank Pass Book copy",
+      "Proof of Age & Nationality"
+    ],
+    "important_notes": [
+      "Students are requested to preserve at least 10 attested photocopies of mark sheet, leaving certificate & board certificate before submitting originals.",
+      "All admissions are provisional and valid for only one academic year, requiring fresh renewal every year."
+    ]
+  },
+  "change_of_college_and_subject": {
+    "change_of_college": "No student will be permitted to change the college during the course of the year without prior written permission of the Principal.",
+    "change_of_subject": {
+      "fee": "Rs. 100/- shall be charged for change of subject.",
+      "conditions": [
+        "Change of Subject will depend on the capacity of the batch of the desired subject.",
+        "Change of Subject is at the discretion of the Respective Department In-charge.",
+        "It is entirely within the discretion of the Principal to grant or refuse any application for change of faculty, subject, or medium."
+      ]
+    }
+  },
+  "cancellation_and_refund_rules": {
+    "ordinance": "As per University of Mumbai Ordinance 0.2859, 0.2859(A) and 0.2859(B)",
+    "procedure": "Admission will be cancelled only on receipt of an application on the prescribed form (available in the college office) together with original fee receipt. A fees receipt, Identity Card, and Library card must be submitted while applying for refund of fees. A penalty of Rs. 100/- will be levied for each receipt lost by the student.",
+    "schedule": [
+      {
+        "period": "Prior to commencement of academic term and instruction of the programme",
+        "deduction": "Rs. 1500/- Lump sum deduction",
+        "refund_percentage": "100% of remaining fees after Rs. 1500 deduction"
+      },
+      {
+        "period": "Upto 20 days after the commencement of academic term of the programme",
+        "deduction": "20% of the total amount of fees",
+        "refund_percentage": "80% refund"
+      },
+      {
+        "period": "From 21st day up to 50 days after commencement of the academic term of the programme",
+        "deduction": "30% of the total amount of fees",
+        "refund_percentage": "70% refund"
+      },
+      {
+        "period": "From 51st day up to 80 days after the commencement of academic term or August 31st whichever is earlier",
+        "deduction": "50% of the total amount of fees",
+        "refund_percentage": "50% refund"
+      },
+      {
+        "period": "From September 1st to September 30th",
+        "deduction": "60% of the total amount of fees",
+        "refund_percentage": "40% refund"
+      },
+      {
+        "period": "After September 30th",
+        "deduction": "100% of the total amount of fees",
+        "refund_percentage": "0% refund (No refund)"
+      }
+    ],
+    "common_fee_rules": [
+      "In case of any change in fees, the same will be notified as and when received from the University / Government.",
+      "Only fresh entrants will pay admission fees.",
+      "In case terms are not granted, examination fees will be refunded and such students will not be eligible to appear for Exams.",
+      "In case of breakage of laboratory equipments, damage to college property, or loss of library books, the cost of loss will be recovered from the student.",
+      "Students from other colleges seeking admission for S.Y. or T.Y. will have to pay Laboratory and Library Fees."
+    ]
+  }
+}

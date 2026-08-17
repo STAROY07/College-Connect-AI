@@ -1,0 +1,34 @@
+{
+  "faqs": [
+    {
+      "id": "faq_001",
+      "question": "What is the minimum attendance required in VMDC?",
+      "answer": "Under University of Mumbai Ordinance No. O. 6086, students are strictly required to maintain a minimum of 75% attendance in total lectures and practicals across the academic year.",
+      "category": "Rules & Attendance"
+    },
+    {
+      "id": "faq_002",
+      "question": "What are the rules for fee refund if I cancel my admission?",
+      "answer": "Fee refund is regulated by University of Mumbai Ordinance 0.2859: Prior to term commencement: Rs. 1500/- deduction; Up to 20 days: 20% deduction (80% refund); 21 to 50 days: 30% deduction (70% refund); 51 to 80 days or Aug 31st: 50% deduction (50% refund); Sept 1st to 30th: 60% deduction (40% refund); After Sept 30th: 100% deduction (No refund).",
+      "category": "Admissions & Fees"
+    },
+    {
+      "id": "faq_003",
+      "question": "How do I get a railway concession from the college?",
+      "answer": "Bonafide students below 25 years of age can apply for railway season ticket concessions between their nearest residential station and Kopar station. Submit the prescribed form with an attested photocopy of Ration Card or residence proof between recess and after lectures at the college office (turnaround time ~5 mins).",
+      "category": "Student Services"
+    },
+    {
+      "id": "faq_004",
+      "question": "What is the JMF Scholarship and who is eligible?",
+      "answer": "The JMF Scholarship by Jahnvis Multi Foundation provides direct financial assistance ranging from Rs. 500/- to Rs. 10,000/- to deserving, underprivileged, and economically backward students irrespective of caste and religion.",
+      "category": "Scholarships"
+    },
+    {
+      "id": "faq_005",
+      "question": "What are the courses offered under VMDC Kaushal Centre?",
+      "answer": "VMDC Kaushal Centre offers 20 specialized 120-hour KLiC courses (fee Rs. 6000/- each) including Advanced Excel, Advanced Tally Pro, Tally Prime with GST, Python, C, C++, Web Designing, Graphic Designing, DTP, and Cyber Security. Deserving students can apply for JMF Scholarships.",
+      "category": "Skill Courses"
+    }
+  ]
+}

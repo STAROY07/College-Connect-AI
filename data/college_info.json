@@ -1,0 +1,49 @@
+{
+  "college": {
+    "name": "Vande Mataram Degree College of Arts, Commerce & Science",
+    "short_name": "VMDC",
+    "trust": "Jahnvis Multi Foundation (JMF)",
+    "founder_president": "Dr. Rajkumar Kolhe",
+    "established_year": 2009,
+    "location": "Old Dombivli & Kopar area, Dombivli (West), Thane, Maharashtra",
+    "affiliation": "Affiliated to University of Mumbai, Approved by Government of Maharashtra & AICTE",
+    "overview": "In view of developing the Old Dombivli & Kopar area and to help the people to develop careers through higher education, the Vande Mataram Degree College of Arts, Commerce and Science was started in the year 2009. Though the College had only two UG programmes at its inception, within a period of 14 years it has grown in a big way with 12 UG programmes and 4 PG programmes affiliated to University of Mumbai and 2 Programmes approved by AICTE due to the tireless efforts of the Hon. Founder President Dr. Rajkumar Kolhe.",
+    "infrastructure": {
+      "building": "Seven-storied dedicated educational building",
+      "halls_and_centres": [
+        {
+          "name": "Vishwakarma Natural Roof-Top",
+          "capacity": 600,
+          "description": "Natural open-air terrace venue with 600 seating capacity for mega events and student assemblies."
+        },
+        {
+          "name": "Madhuban Banquet Hall",
+          "capacity": 300,
+          "description": "Air-conditioned banquet hall with two smart TVs, high-speed internet connectivity, and 300 capacity."
+        },
+        {
+          "name": "JMF Brahma Rangtalay",
+          "capacity": 1000,
+          "description": "Open-stage grand auditorium with around 1000 capacity for major annual festivals and convocations."
+        },
+        {
+          "name": "Conference Halls (2 Halls)",
+          "capacity": "150 each",
+          "description": "Two state-of-the-art Conference Halls with modern audio-visual facilities for seminars, webinars, and conferences."
+        }
+      ],
+      "salient_features": [
+        "Fully Ventilated, Spacious Class Rooms",
+        "Well-Equipped Labs with modern Amenities (Botany, Zoology, Physics, Chemistry & High-Tech Computer Lab)",
+        "Digitalized Computerized Library with over 1000+ books, journals & reference materials",
+        "Dedicated & Highly Qualified Teachers",
+        "One-to-one Student Mentoring & Guidance",
+        "Career Oriented Training & Skill Development",
+        "Add-on Skill Oriented Courses (VMDC Kaushal Centre)",
+        "100% Job Placement Assistance & Campus Job Melas"
+      ]
+    },
+    "vision": "To integrate research and innovation to provide quality education and develop a proficient, holistic human resource for an inclusive society.",
+    "mission": "To promote education that fosters critical thinking and leadership qualities, transforming individuals into competent citizens who serve willingly their families, communities and the nation with the right attitude and inclusivity."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "college_timing": "Decision of College timing is solely at the discretion of the Principal.",
+  "attendance": {
+    "ordinance": "Under Ordinance No. O. 6086 of the University of Mumbai",
+    "requirement": "A student is required to attend 75% of the total number of Lectures and Practicals for the academic year.",
+    "bunking_policy": "Bunking of Lectures is a punishable offence. Students may take leave of absence with prior permission from class in-charges in case of emergency or need."
+  },
+  "discipline_and_code_of_conduct": [
+    "Students must behave properly both inside the classroom and in the college premises and must not do anything that will cause disturbance to any class or fellow students.",
+    "Loitering in the corridors or sitting on steps or corners is strictly prohibited.",
+    "Chewing of Tobacco, Eating Chewing Gum, Smoking, or any kind of liquor intoxication is strictly prohibited inside or outside the campus for students and visitors.",
+    "No student can enter into College Campus without Notebook, Pen, Proper Handbook, and valid College Identity Card (ID).",
+    "Students should always carry their valid college I-Cards whenever in college or representing the college and produce it whenever demanded by college staff.",
+    "Students are prohibited to do anything inside or outside the college that will interfere with the orderly administration of the college or affect its public image. No outside influence (political or other) should be brought into college.",
+    "In case of any problem (personal or academic), students should report to the Prof-in-charge of their respective class or Principal.",
+    "Students are directed not to bring any outsider to the college premises.",
+    "Students should not collect any fund from other students or outsiders without prior written permission of the Principal.",
+    "Students should not organize on their own picnics, excursions, or trips without prior written permission of the Principal.",
+    "Students should not write on benches/walls and must help in maintaining the learning environment neat and clean.",
+    "Cell phones are not allowed for students in the college campus during Exam Period. If found, phones will be confiscated.",
+    "The power relating to disciplinary action vests with the Principal and his decision shall be final."
+  ],
+  "anti_ragging": {
+    "notification": "Government of Maharashtra has notified Ragging as a strictly punishable offence.",
+    "rule": "Anyone reported to be involved in any form of ragging will be severely dealt with under the law. Therefore, students are required to refrain from indulging in any form of ragging."
+  },
+  "library_rules": {
+    "general": [
+      "Every student entering into the library must possess a valid College Identity Card.",
+      "Eatables, Audio-Visual devices, Mobile phones, and other equipment are strictly prohibited. Phones used in library premises will be confiscated and fined by Discipline Committee.",
+      "Complete silence and strict discipline must be maintained in the Library & Study Room.",
+      "Students are required to handle books and reading materials very carefully. Marking library books with pencil/ink, tearing pages or spoiling books is viewed very seriously.",
+      "If mutilated or lost, the borrower will have to replace the book with a new copy or pay the current price along with a processing charge of Rs. 50/- and overdue charges.",
+      "If student fails to return the book even after the completion of the final examination, results of such students shall not be declared.",
+      "If Library cards are lost, duplicate set may be issued on payment of Rs. 50/- for Home Issue Card and Rs. 25/- for Reading Room Card upon application to Principal.",
+      "Duplicate Identity Card fee in case of loss of I-Card: Rs. 100/-."
+    ],
+    "reading_room_rules": [
+      "Textbooks, reference books & journals will be issued against I-Cards and cannot be taken outside the Study Room.",
+      "Approach Head Librarian / Assistant Librarian for specialized reference materials."
+    ],
+    "home_issue_rules": [
+      "Only textbooks will be issued for Home-Reading for a maximum duration of 7 days.",
+      "Re-issue of books depends on demand.",
+      "Late return fine: Rs. 1/- per day for the first week, and Rs. 4/- per day in subsequent weeks (Same for CDs). In case of serious default, fine may increase up to Rs. 10/- per day. Holidays are counted while calculating fines."
+    ]
+  },
+  "atkt_rules": {
+    "title": "3.12 ALLOWED TO KEEP TERMS (ATKT) Criteria",
+    "progression": [
+      {
+        "to_semester": "Semester II",
+        "condition": "Allowed to keep term for Semester II irrespective of grades obtained in each course of Semester I."
+      },
+      {
+        "to_semester": "Semester III",
+        "condition": "Allowed if passes (grade 'D' or above in each course) in Semester I & II OR fails in not more than 3 courses in each Semester I & II (for subjects carrying 900+ marks) OR fails in not more than 3 courses with <= 200 total marks in each semester (for subjects carrying < 900 marks)."
+      },
+      {
+        "to_semester": "Semester IV",
+        "condition": "Allowed to keep term for Semester IV irrespective of grades obtained in each course of Semester III."
+      },
+      {
+        "to_semester": "Semester V",
+        "condition": "Allowed if passes Semester I, II, III, and IV OR passes Semester I & II and fails in not more than 3 courses in each Semester III & IV (for 900+ mark subjects) OR fails in not more than 3 courses with <= 200 marks in each Semester III & IV (for < 900 mark subjects)."
+      },
+      {
+        "to_semester": "Semester VI",
+        "condition": "Allowed to keep terms for Semester VI irrespective of grades obtained in each course of Semester V. However, Semester VI result will be kept in abeyance until the learner passes each of Semester I, II, III, IV, and V."
+      }
+    ]
+  },
+  "unfair_means_in_examination": {
+    "rule": "Use of unfair means like copying and helping to copy in the examination hall is a malpractice punishable under the Maharashtra Act No. XXXI of 1982.",
+    "consequences": "Dealt with as per University of Mumbai rules. Punishments include declaring examination results null and void and debarring from subsequent examinations."
+  }
+}

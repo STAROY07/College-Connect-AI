@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Student Welfare & Scholarships | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>Student Welfare Schemes & Scholarships</h2>
+  <p>Financial grants, book bank schemes, Yuva Raksha insurance, and entrepreneurship startup funds</p>
+</div>
+
+<!-- Welfare Schemes Grid -->
+<div class="grid-2" style="margin-bottom: 28px;">
+  <!-- JMF Scholarship -->
+  <div class="card" id="jmf" style="border-top: 4px solid var(--accent-gold);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">🎁 JMF Scholarship</h3>
+      <span class="badge badge-gold">Rs. 500 to Rs. 10,000/-</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Given to all students who deserve irrespective of caste and religion. Available to underprivileged and economically backward students based on social status of students and guardians.</p>
+    <div style="background: var(--bg-subtle); padding: 10px 12px; border-radius: var(--radius-md); font-size: 12px; color: var(--text-secondary);">
+      💡 Applied directly through the college office counter with parental income certificate.
+    </div>
+  </div>
+
+  <!-- Yuva Raksha Group Insurance -->
+  <div class="card" id="insurance" style="border-top: 4px solid var(--primary-light);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">🛡️ Yuva Raksha Group Insurance</h3>
+      <span class="badge badge-primary">Premium: Rs. 40/- / Year</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px;">Introduced by University of Mumbai for students in affiliated colleges covering three accident contingencies:</p>
+    <ul style="margin-left: 18px; font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
+      <li>100% financial coverage in case of sad demise of student.</li>
+      <li>100% financial coverage for permanent disability.</li>
+      <li>Coverage for hospitalization expenses arising out of accidents.</li>
+    </ul>
+  </div>
+
+  <!-- Students' Aid Fund & Book Bank -->
+  <div class="card" id="bookbank" style="border-top: 4px solid var(--success);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">📚 Students' Aid Fund & Book Bank</h3>
+      <span class="badge badge-success">Yearly Fee: Rs. 5/-</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px;"><strong>Students' Aid Fund:</strong> Provides financial grants to needy students for tuition/exam fees, S.T. bus pass, and medical charges.</p>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;"><strong>Book Bank:</strong> Textbooks issued for the entire academic year to needy students, along with competitive exam study resources.</p>
+  </div>
+
+  <!-- Student Startup Scheme -->
+  <div class="card" id="startup" style="border-top: 4px solid var(--accent);">
+    <div class="card-header">
+      <h3 style="font-size: 18px; color: var(--primary-dark);">🚀 Student Start-Up Scheme</h3>
+      <span class="badge badge-primary">Seed Capital: Up to Rs. 5000/-</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Seed capital provided by the college for students interested in launching small business ventures upon submitting a formal business proposal and plan.</p>
+    <div style="font-size: 12px; color: var(--text-muted);">
+      Allocation and approval is under the sole discretion of the Principal.
+    </div>
+  </div>
+</div>
+
+<!-- Counseling Cell & JMF Prizes -->
+<div class="grid-2">
+  <!-- Counseling Cell -->
+  <div class="card">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🧠 Counseling Cell</h3>
+      <span class="badge badge-primary">Daily: 11:00 AM - 1:00 PM</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Confidential guidance for students coping with stress, emotional strain, or personal difficulties with professional counselors.</p>
+    <div style="font-size: 12px; color: var(--primary-light); font-weight: 600;">
+      All matters are kept strictly confidential. Contact Principal in this regard.
+    </div>
+  </div>
+
+  <!-- JMF Family Member Prizes -->
+  <div class="card">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🏆 JMF Family Prizes & Awards</h3>
+      <span class="badge badge-gold">Annual Awards</span>
+    </div>
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--text-secondary);">
+      {% for prize in welfare.prizes_and_awards %}
+      <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 4px;">
+        <span>{{ prize.name }}</span>
+        <strong style="color: var(--primary-dark);">{{ prize.amount }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

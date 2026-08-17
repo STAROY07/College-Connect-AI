@@ -1,0 +1,29 @@
+{
+  "centre_name": "VMDC Kaushal Centre",
+  "overview": "Dedicated vocational skill development centre offering job-oriented training courses across modern technology, accounting, media, design, and office productivity.",
+  "duration": "Each programme is of 120 hours",
+  "fee": "Rs. 6000/- per programme",
+  "scholarship_note": "Deserving students may apply for JMF Scholarship to support course fees.",
+  "courses": [
+    {"id": "klic_adv_excel", "name": "KLiC Advanced Excel", "category": "Office Productivity & Analytics"},
+    {"id": "klic_adv_tally_pro", "name": "KLiC Advanced Tally Pro", "category": "Accounting & Finance"},
+    {"id": "klic_tally_prime_gst", "name": "KLiC Tally Prime with GST", "category": "Accounting & Finance"},
+    {"id": "klic_c_prog", "name": "KLiC C Programming", "category": "Software & Programming"},
+    {"id": "klic_cpp_prog", "name": "KLiC C++ Programming", "category": "Software & Programming"},
+    {"id": "klic_content_illust", "name": "KLiC Content Illustration", "category": "Design & Digital Media"},
+    {"id": "klic_data_entry", "name": "KLiC Data Entry and Data Management", "category": "Office Productivity & Analytics"},
+    {"id": "klic_digital_freelance", "name": "KLiC Digital Freelancing", "category": "Digital Skills & Careers"},
+    {"id": "klic_dtp", "name": "KLiC DTP (Adobe & CorelDRAW)", "category": "Design & Digital Media"},
+    {"id": "klic_graphic_design", "name": "KLiC Graphic Designing", "category": "Design & Digital Media"},
+    {"id": "klic_hardware", "name": "KLiC Hardware Support", "category": "Hardware & IT Support"},
+    {"id": "klic_it_art_teacher", "name": "KLiC IT for Art Teacher", "category": "Specialized Tech"},
+    {"id": "klic_office_assist", "name": "KLiC Office Assistance", "category": "Office Productivity & Administration"},
+    {"id": "klic_photoshop", "name": "KLiC Photoshop", "category": "Design & Digital Media"},
+    {"id": "klic_python", "name": "KLiC Python", "category": "Software & Programming"},
+    {"id": "klic_security_support", "name": "KLiC Security Support", "category": "Cyber & IT Security"},
+    {"id": "klic_video_editing", "name": "KLiC Video Editing", "category": "Design & Digital Media"},
+    {"id": "klic_web_design", "name": "KLiC Web Designing", "category": "Software & Web Development"},
+    {"id": "klic_google_workspace", "name": "KLiC Google Workspace Expert", "category": "Cloud & Office Productivity"},
+    {"id": "klic_c_and_cpp", "name": "KLiC C & C++ Programming", "category": "Software & Programming"}
+  ]
+}

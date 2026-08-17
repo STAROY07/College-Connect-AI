@@ -1,0 +1,62 @@
+{
+  "schemes": [
+    {
+      "id": "jmf_scholarship",
+      "name": "JMF Scholarship (Jahnvis Multi Foundation)",
+      "amount": "Rs. 500/- to Rs. 10,000/-",
+      "eligibility": "Given to all deserving students irrespective of caste and religion. Available to underprivileged and economically backward students based on social status of students and guardians.",
+      "description": "Direct financial grant by the JMF Trust to support students in fee payments, textbooks, and academic requirements."
+    },
+    {
+      "id": "student_welfare_fund",
+      "name": "Students Welfare Fund",
+      "eligibility": "Needy and deserving students requiring financial assistance for education and books.",
+      "procedure": "Students apply with parental income certificate and a copy of mark sheet on the prescribed application form."
+    },
+    {
+      "id": "student_aid_fund",
+      "name": "Students' Aid Fund",
+      "contribution": "Every student of the degree college contributes Rs. 5/- as yearly contribution towards the Students' Aid Fund.",
+      "benefits": "Provides financial assistance to meet tuition/examination fees, cost of books, S.T. bus pass, medical charges, etc. Students apply in response to the official notice."
+    },
+    {
+      "id": "book_bank",
+      "name": "Book Bank Scheme",
+      "duration": "Books are issued for one academic year only.",
+      "description": "Established by the Students' Aid Fund to provide full sets of textbooks to needy and deserving students. Books for competitive examinations are also available. Students must return books in good condition after the examination."
+    },
+    {
+      "id": "group_insurance",
+      "name": "Yuva Raksha Group Insurance Scheme",
+      "premium": "Rs. 40/- per student per year (collected at admission)",
+      "coverage": [
+        "100% financial coverage in case of sad demise of student.",
+        "100% financial coverage for permanent disability.",
+        "Full coverage for hospitalization expenses arising out of accidents."
+      ],
+      "affiliation": "Introduced by University of Mumbai in partnership with approved insurance companies for affiliated college students."
+    },
+    {
+      "id": "startup_scheme",
+      "name": "Student Start-Up Scheme",
+      "seed_capital": "Seed Capital up to Rs. 5,000/- provided by the college",
+      "eligibility": "Students interested in launching a small business enterprise.",
+      "procedure": "Student must prepare a business proposal and business plan. Approval and fund allocation is reserved under the sole discretion of the Principal."
+    },
+    {
+      "id": "counseling_cell",
+      "name": "Counseling Cell",
+      "timings": "Every day from 11:00 AM to 1:00 PM",
+      "purpose": "Helps students cope with personal problems, depression, academic stress, and emotional strain with professional counselors in strict confidentiality. Contact Principal for access."
+    }
+  ],
+  "prizes_and_awards": [
+    {"name": "Lord Pitashri Brahmababa JMF Best Staff of the Decade", "amount": "Rs. 11,000/-"},
+    {"name": "Lord Matoshri Jagdamba Saraswati Gem of JMF for Current Academic Year", "amount": "Rs. 2,001/-"},
+    {"name": "Late Renukabai & Jagannathji Kolhe for Art, Literature & Culture Cash Prize", "amount": "Rs. 2,001/-"},
+    {"name": "JMF Best Activity Family Member Prize", "amount": "Rs. 2,001/-"},
+    {"name": "JMF Innovative Practice in Teaching & Non-Teaching Prize", "amount": "Rs. 2,001/-"},
+    {"name": "JMF Best Available Teaching/Non-Teaching Family Member Prize", "amount": "Rs. 2,001/-"},
+    {"name": "Best JMF Student of the Year (Two Prizes: One for Girl & One for Boy)", "amount": "Rs. 1,001/- each"}
+  ]
+}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login | College Connect AI{% endblock %}
+
+{% block content %}
+<div class="container" style="max-width: 400px; margin: 80px auto; padding: 0 15px;">
+  <div class="card" style="padding: 30px;">
+    <div style="text-align: center; margin-bottom: 25px;">
+      <div class="nav-brand-icon" style="margin: 0 auto 10px; width: 48px; height: 48px; border-radius: var(--r-md); background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px;">CC</div>
+      <h2 style="font-size: 20px; color: var(--primary-dark); font-weight: 700;">Admin Login</h2>
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Sign in to manage the knowledge base</p>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div style="background: var(--{{ category }}-light, var(--accent-light)); color: var(--{{ category }}, var(--accent)); padding: 10px 14px; border-radius: var(--r-sm); font-size: 13px; margin-bottom: 20px; font-weight: 500;">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% if error %}
+    <div style="background: var(--danger-light, #fee2e2); color: var(--danger, #dc2626); padding: 10px 14px; border-radius: var(--r-sm); font-size: 13px; margin-bottom: 20px; font-weight: 500;">
+      {{ error }}
+    </div>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('admin_login') }}">
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label for="username" style="display: block; font-size: 12px; font-weight: 600; color: var(--text-head); margin-bottom: 6px;">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Enter admin username" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--r-sm); font-size: 14px; outline: none; transition: var(--trans);">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 25px;">
+        <label for="password" style="display: block; font-size: 12px; font-weight: 600; color: var(--text-head); margin-bottom: 6px;">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--r-sm); font-size: 14px; outline: none; transition: var(--trans);">
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 14px;">Sign In to Dashboard</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 20px; font-size: 12px; color: var(--text-muted);">
+      <a href="{{ url_for('home') }}" style="color: var(--accent); text-decoration: none;">&larr; Back to Public Portal</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

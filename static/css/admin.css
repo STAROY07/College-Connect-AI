@@ -1,0 +1,195 @@
+/* ── Admin Panel CSS ──────────────────────────────────────── */
+
+/* Admin Layout */
+.admin-layout {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+.admin-sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--primary-dark);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.admin-sidebar-hd {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 10px;
+}
+.admin-sidebar-hd .lbl {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  display: block;
+  margin-bottom: 4px;
+}
+.admin-sidebar-hd .username {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+.admin-nav { list-style: none; padding: 0 10px; flex: 1; }
+.admin-nav li a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 500;
+  color: #94a3b8;
+  transition: var(--trans);
+  text-decoration: none;
+}
+.admin-nav li a:hover { background: rgba(255,255,255,0.08); color: #e2e8f0; }
+.admin-nav li a.active { background: rgba(37,99,235,0.25); color: #93c5fd; }
+.admin-nav-logout a { color: #f87171 !important; }
+.admin-nav-logout a:hover { background: rgba(220,38,38,0.15) !important; }
+.admin-content { flex: 1; padding: 28px; overflow-x: hidden; min-width: 0; }
+
+/* Admin Stats */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.admin-stat {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.admin-stat .lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 6px; }
+.admin-stat .val { font-size: 28px; font-weight: 800; color: var(--text-head); line-height: 1; }
+
+/* Admin Tabs */
+.admin-tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: var(--trans);
+  font-family: var(--font);
+  margin-bottom: -1px;
+}
+.tab-btn:hover { color: var(--primary); }
+.tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Admin Page Header */
+.admin-page-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.admin-page-hd h2 { font-size: 20px; font-weight: 700; color: var(--text-head); }
+
+/* Admin Table Action Buttons */
+.tbl-actions { display: flex; gap: 6px; }
+
+@media (max-width: 1024px) {
+  .admin-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .admin-layout { flex-direction: column; }
+  .admin-sidebar { width: 100%; flex-direction: row; padding: 10px; overflow-x: auto; }
+  .admin-sidebar-hd { display: none; }
+  .admin-nav { display: flex; flex-direction: row; gap: 4px; padding: 0; }
+  .admin-nav li a { white-space: nowrap; padding: 7px 12px; }
+  .admin-content { padding: 16px; }
+  .admin-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .admin-stats { grid-template-columns: 1fr; }
+}
+
+/* ── Admin Login Page ─────────────────────────────────────── */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #1e3a8a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.login-box {
+  background: #fff;
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-xl);
+}
+.login-logo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-logo-icon {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-mid) 100%);
+  color: #fff;
+  border-radius: var(--r-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 24px;
+  margin: 0 auto 12px;
+  box-shadow: 0 4px 14px rgba(26,58,110,0.3);
+}
+.login-logo h2 { font-size: 20px; font-weight: 700; color: var(--text-head); }
+.login-logo p  { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+.login-error {
+  background: var(--danger-light);
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.login-btn {
+  width: 100%;
+  padding: 11px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-md);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--trans);
+  font-family: var(--font);
+  margin-top: 4px;
+}
+.login-btn:hover { background: var(--primary-dark); }
+.login-back {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.login-back a { color: var(--accent); font-weight: 500; }
+.login-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}

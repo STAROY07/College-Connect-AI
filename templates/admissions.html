@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block title %}Admissions | Vande Mataram Degree College{% endblock %}
+{% block content %}
+
+<div class="hero-banner" style="padding:22px 28px;">
+  <div>
+    <h2>Admissions 2026–27</h2>
+    <p>Admission guidelines, eligibility criteria, required documents, fee refund policy, and reservation categories.</p>
+  </div>
+</div>
+
+<div class="grid-2" style="margin-top:24px;gap:28px;">
+
+  <!-- Left Column -->
+  <div>
+
+    <!-- Admission Process -->
+    {% if admissions.admission_process %}
+    <div class="card" style="margin-bottom:20px;">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:14px;">📝 Admission Process</div>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:10px;">
+        {% for step in admissions.admission_process %}
+        <li style="font-size:14px;line-height:1.5;color:var(--text-body);">
+          {% if step.step %}<strong style="color:var(--primary);">Step {{ step.step }}: </strong>{% endif %}
+          {{ step.description or step }}
+          {% if step.note %}<br><span style="font-size:12px;color:var(--text-muted);">{{ step.note }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endif %}
+
+    <!-- UG Eligibility -->
+    {% if admissions.ug_eligibility %}
+    <div class="card" style="margin-bottom:20px;">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:14px;">🎓 UG Eligibility (Passed HSC or Equivalent)</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Programme</th><th>Minimum Qualification</th><th>Seat Limit</th></tr></thead>
+          <tbody>
+            {% for prog in admissions.ug_eligibility %}
+            <tr>
+              <td style="font-weight:600;">{{ prog.programme }}</td>
+              <td>{{ prog.eligibility or 'HSC Pass (Any stream)' }}</td>
+              <td>{{ prog.seats or '—' }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Reservation -->
+    {% if admissions.reservation_categories %}
+    <div class="card">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:14px;">📊 Reservation Categories</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Percentage</th></tr></thead>
+          <tbody>
+            {% for cat in admissions.reservation_categories %}
+            <tr>
+              <td>{{ cat.category }}</td>
+              <td><span class="badge badge-blue">{{ cat.percentage }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <!-- Right Column -->
+  <div>
+
+    <!-- Required Documents -->
+    {% if admissions.required_documents %}
+    <div class="card" style="margin-bottom:20px;">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:14px;">📄 Required Documents</div>
+      <ul style="display:flex;flex-direction:column;gap:8px;list-style:none;">
+        {% for doc in admissions.required_documents %}
+        <li style="display:flex;align-items:flex-start;gap:10px;font-size:13px;padding-bottom:8px;border-bottom:1px solid var(--border);">
+          <span style="color:var(--success);flex-shrink:0;margin-top:1px;">✓</span>
+          <span>
+            <strong>{{ doc.document }}</strong>
+            {% if doc.copies %} — {{ doc.copies }}{% endif %}
+            {% if doc.note %}<br><span style="color:var(--text-muted);font-size:12px;">{{ doc.note }}</span>{% endif %}
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <!-- Fee Refund -->
+    {% if admissions.fee_refund_policy %}
+    <div class="card" style="margin-bottom:20px;">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:12px;">💳 Fee Refund Policy (Ord. 0.2859)</div>
+      {% if admissions.fee_refund_policy.description %}
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">{{ admissions.fee_refund_policy.description }}</p>
+      {% endif %}
+      {% if admissions.fee_refund_policy.slabs %}
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Timing of Withdrawal</th><th>Refund %</th></tr></thead>
+          <tbody>
+            {% for slab in admissions.fee_refund_policy.slabs %}
+            <tr>
+              <td>{{ slab.timing }}</td>
+              <td><span class="badge badge-{% if slab.refund_percent == '100%' %}green{% elif slab.refund_percent == '0%' %}red{% else %}gold{% endif %}">{{ slab.refund_percent }}</span></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+      {% if admissions.fee_refund_policy.note %}
+      <div class="alert alert-warning" style="margin-top:12px;margin-bottom:0;font-size:12px;">
+        <span>⚠️</span>{{ admissions.fee_refund_policy.note }}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- Important Dates -->
+    {% if admissions.important_dates %}
+    <div class="card">
+      <div style="font-size:16px;font-weight:700;color:var(--text-head);margin-bottom:14px;">📅 Important Dates 2026–27</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+        {% for d in admissions.important_dates %}
+        <li style="display:flex;justify-content:space-between;align-items:center;font-size:13px;padding-bottom:8px;border-bottom:1px solid var(--border);">
+          <span>{{ d.event }}</span>
+          <span style="font-weight:700;color:var(--accent);font-size:12px;white-space:nowrap;margin-left:10px;">{{ d.date }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<div class="alert alert-info" style="margin-top:20px;">
+  <span>ℹ️</span>
+  <div>For detailed admission queries, please visit the college office or ask our <a href="{{ url_for('home') }}">AI Assistant</a>. All reservations are as per Maharashtra Government norms.</div>
+</div>
+
+{% endblock %}

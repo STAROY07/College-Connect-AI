@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found | College Connect AI{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding: 80px 20px;">
+  <div style="font-size: 80px; font-weight: 800; color: var(--primary); margin-bottom: 10px;">404</div>
+  <h2 style="font-size: 24px; color: var(--text-head); font-weight: 700; margin-bottom: 10px;">Page Not Found</h2>
+  <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 30px;">The page you are looking for doesn't exist or has been moved.</p>
+  <a href="{{ url_for('home') }}" class="btn btn-primary">← Back to Home</a>
+</div>
+{% endblock %}

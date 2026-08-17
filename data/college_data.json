@@ -1,0 +1,37 @@
+{
+    "college": {
+        "name": "Vande Mataram Degree College",
+        "location": "Dombivli, Maharashtra"
+    },
+
+    "courses": {
+        "BSc Computer Science": {
+            "eligibility": "12th standard passed with the required subjects as per college and university rules.",
+            "admission": "Admission is based on the applicable college and university admission process."
+        },
+        "BCom": {
+            "eligibility": "12th standard passed.",
+            "admission": "Admission is based on the applicable college and university admission process."
+        },
+        "BA": {
+            "eligibility": "12th standard passed.",
+            "admission": "Admission is based on the applicable college and university admission process."
+        }
+    },
+
+    "documents": [
+        "10th marksheet",
+        "12th marksheet",
+        "Leaving Certificate",
+        "Aadhaar Card",
+        "Passport size photographs"
+    ],
+
+    "scholarship": {
+        "information": "Students can check the applicable scholarship schemes and eligibility through the college office."
+    },
+
+    "fees": {
+        "information": "Fee details should be confirmed from the college office because fees may vary according to the course and academic year."
+    }
+}

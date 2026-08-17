@@ -1,0 +1,48 @@
+{
+  "updates": [
+    {
+      "id": "upd_55355e",
+      "title": "New Government Result Portal 2026",
+      "category": "Portals / Results",
+      "content": "The college now uses XYZ Maharashtra portal (xyzportal.gov.in) for result checking.",
+      "source": "College Office",
+      "url": "https://xyzportal.gov.in",
+      "date_added": "2026-08-16",
+      "last_updated": "2026-08-16",
+      "status": "Active"
+    },
+    {
+      "id": "upd_001",
+      "title": "Academic Admissions Open for 2026-27",
+      "category": "Admission Notice",
+      "content": "Admissions are actively open for First Year UG (B.Sc CS, B.Sc IT, BCA, BBA, B.Com, BAF, BMS, BA) and PG programmes for Academic Year 2026-27. Submit enrollment forms at the administrative office.",
+      "source": "College Office",
+      "url": "https://vmdc.edu.in/admissions",
+      "date_added": "2026-08-10",
+      "last_updated": "2026-08-16",
+      "status": "Active"
+    },
+    {
+      "id": "upd_002",
+      "title": "Government MahaDBT Scholarship Form Filling Desk",
+      "category": "Scholarship Notice",
+      "content": "The college online form filling desk is operational in the library Annexure to assist SC/ST/OBC/VJNT/EBC students in submitting MahaDBT scholarship forms. Bring required Tehsildar income certificate and caste documents.",
+      "source": "Student Welfare Cell",
+      "url": "https://mahadbt.maharashtra.gov.in",
+      "date_added": "2026-08-12",
+      "last_updated": "2026-08-16",
+      "status": "Active"
+    },
+    {
+      "id": "upd_003",
+      "title": "University Examination & Result Portal",
+      "category": "Portals / Results",
+      "content": "Students can access upcoming semester exam time tables, hall tickets, and declared university results through the University of Mumbai Examination portal and college notice board.",
+      "source": "Examination Committee",
+      "url": "https://mu.ac.in",
+      "date_added": "2026-08-14",
+      "last_updated": "2026-08-16",
+      "status": "Active"
+    }
+  ]
+}

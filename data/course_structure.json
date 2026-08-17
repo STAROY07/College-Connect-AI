@@ -1,0 +1,516 @@
+{
+  "programmes": {
+    "bsc_cs": {
+      "name": "B.Sc. Computer Science (B.Sc. CS)",
+      "seats": 60,
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "CS-101", "name": "Open source Technologies"},
+            {"code": "CS-102", "name": "Web Technology"},
+            {"code": "CS-103", "name": "Cyber & Digital Safety"},
+            {"code": "CS-104", "name": "Introduction to Environment"},
+            {"code": "CS-105", "name": "Introduction to Communication Skills I"},
+            {"code": "CS-106", "name": "Indian Constitution I"},
+            {"code": "CS-107", "name": "Indian Knowledge System Series (Generic) - I"},
+            {"code": "CS-108", "name": "Field Project"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "CS-201", "name": "Social Media Marketing"},
+            {"code": "CS-202", "name": "Advanced Excel"},
+            {"code": "CS-203", "name": "IT_Computer Security"},
+            {"code": "CS-204", "name": "Academic and Business Writing"},
+            {"code": "CS-205", "name": "Introduction to Communication Skills II"},
+            {"code": "CS-206", "name": "Indian Constitution II"},
+            {"code": "CS-207", "name": "Field Project"}
+          ]
+        }
+      }
+    },
+    "bsc_it": {
+      "name": "B.Sc. Information Technology (B.Sc. IT)",
+      "seats": 120,
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "IT-101", "name": "IT_Fundamentals of Computer"},
+            {"code": "IT-102", "name": "IT_Google Workspace"},
+            {"code": "IT-103", "name": "IT_PHP DOTNET core"},
+            {"code": "IT-104", "name": "Introduction to Environment"},
+            {"code": "IT-105", "name": "Introduction to Communication Skills I"},
+            {"code": "IT-106", "name": "Indian Constitution I"},
+            {"code": "IT-107", "name": "Indian Knowledge System Series (Generic) - I"},
+            {"code": "IT-108", "name": "Field Project I"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "IT-201", "name": "IT_Web Designing"},
+            {"code": "IT-202", "name": "IT_Data Analysis with Excel"},
+            {"code": "IT-203", "name": "Data Science"},
+            {"code": "IT-204", "name": "Academic and Business Writing"},
+            {"code": "IT-205", "name": "Introduction to Communication Skills II"},
+            {"code": "IT-206", "name": "Indian Constitution II"},
+            {"code": "IT-207", "name": "Field Project II"}
+          ]
+        }
+      }
+    },
+    "bca": {
+      "name": "Bachelor of Computer Applications (B.C.A.)",
+      "seats": 60,
+      "pattern": "100 Marks (75:25 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "BCA-101", "name": "Hardware Lab (CIA Only)"},
+            {"code": "BCA-102", "name": "Creative English"},
+            {"code": "BCA-103", "name": "Foundational Mathematics"},
+            {"code": "BCA-104", "name": "Statistics I For BCA"},
+            {"code": "BCA-105", "name": "Digital Computer Fundamentals"},
+            {"code": "BCA-106", "name": "Introduction To Programming Using C"},
+            {"code": "BCA-107", "name": "C Programming Lab"},
+            {"code": "BCA-108", "name": "PC Software Lab"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "BCA-201", "name": "Case Tools Lab (CIA Only)"},
+            {"code": "BCA-202", "name": "Communicative English"},
+            {"code": "BCA-203", "name": "Basic Discrete Mathematics"},
+            {"code": "BCA-204", "name": "Operating Systems"},
+            {"code": "BCA-205", "name": "Data Structures"},
+            {"code": "BCA-206", "name": "Data Structures Lab"},
+            {"code": "BCA-207", "name": "Visual Programming Lab"}
+          ]
+        },
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "BCA-301", "name": "Interpersonal Communication"},
+            {"code": "BCA-302", "name": "Introductory Algebra"},
+            {"code": "BCA-303", "name": "Financial Accounting"},
+            {"code": "BCA-304", "name": "Software Engineering"},
+            {"code": "BCA-305", "name": "Database Management Systems"},
+            {"code": "BCA-306", "name": "Object Oriented Programming Using C++"},
+            {"code": "BCA-307", "name": "C++ Lab"},
+            {"code": "BCA-308", "name": "Oracle Lab"},
+            {"code": "BCA-309", "name": "Domain Lab (CIA Only)"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "BCA-401", "name": "Professional English"},
+            {"code": "BCA-402", "name": "Financial Management"},
+            {"code": "BCA-403", "name": "Computer Networks"},
+            {"code": "BCA-404", "name": "Programming In Java"},
+            {"code": "BCA-405", "name": "Java Programming Lab"},
+            {"code": "BCA-406", "name": "DBMS Project Lab"},
+            {"code": "BCA-407", "name": "Web Technology Lab"},
+            {"code": "BCA-408", "name": "Language Lab (CIA Only)"}
+          ]
+        },
+        "5": {
+          "title": "Semester V",
+          "subjects": [
+            {"code": "BCA-501", "name": "Unix Programming"},
+            {"code": "BCA-502", "name": "OOAD Using UML"},
+            {"code": "BCA-503", "name": "User Interface Design"},
+            {"code": "BCA-504", "name": "Graphics And Animation"},
+            {"code": "BCA-505", "name": "Python Programming"},
+            {"code": "BCA-506", "name": "Business Intelligence"},
+            {"code": "BCA-507", "name": "Unix Lab"},
+            {"code": "BCA-508", "name": "Web Designing Project"},
+            {"code": "BCA-509", "name": "Graphics And Animation Lab"},
+            {"code": "BCA-510", "name": "Python Programming Lab"},
+            {"code": "BCA-511", "name": "Business Intelligence Lab"}
+          ]
+        },
+        "6": {
+          "title": "Semester VI",
+          "subjects": [
+            {"code": "BCA-601", "name": "Design And Analysis Of Algorithms"},
+            {"code": "BCA-602", "name": "Client-Server Computing"},
+            {"code": "BCA-603", "name": "Computer Architecture"},
+            {"code": "BCA-604", "name": "Cloud Computing"},
+            {"code": "BCA-605", "name": "Multimedia Applications"},
+            {"code": "BCA-606", "name": "Introduction To Soft Computing"},
+            {"code": "BCA-607", "name": "Advanced Database Management System"}
+          ]
+        }
+      }
+    },
+    "bba": {
+      "name": "Bachelor of Business Administration (B.B.A.)",
+      "seats": 60,
+      "pattern": "100 Marks (75:25 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "BBA-101", "name": "Principles and Practices of Management"},
+            {"code": "BBA-102", "name": "Business Communication-I"},
+            {"code": "BBA-103", "name": "Financial accounting"},
+            {"code": "BBA-104", "name": "Business Statistics and Logic"},
+            {"code": "BBA-105", "name": "General English"},
+            {"code": "BBA-106", "name": "Indian Knowledge System"},
+            {"code": "BBA-107", "name": "Environmental Science and sustainability"},
+            {"code": "BBA-108", "name": "Additional Course - Indian or Foreign Language"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "BBA-201", "name": "Human Behavior and Organization"},
+            {"code": "BBA-202", "name": "Marketing Management"},
+            {"code": "BBA-203", "name": "Business Economics"},
+            {"code": "BBA-204", "name": "Emerging Technologies and application"},
+            {"code": "BBA-205", "name": "Media Literacy and Critical Thinking"},
+            {"code": "BBA-206", "name": "Indian Constitution"},
+            {"code": "BBA-207", "name": "Business Communication-II"},
+            {"code": "BBA-208", "name": "Additional Course - Indian or Foreign Language"}
+          ]
+        },
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "BBA-301", "name": "Management Accounting"},
+            {"code": "BBA-302", "name": "Legal and Ethical issues in business"},
+            {"code": "BBA-303", "name": "Human Resource Management"},
+            {"code": "BBA-304", "name": "Indian Systems of Health and Wellness"},
+            {"code": "BBA-305", "name": "Management Information System (MIS)"},
+            {"code": "BBA-306", "name": "Yoga/Sports/NCC/NSS/Disaster Management"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "BBA-401", "name": "Entrepreneurship and Startup Ecosystem"},
+            {"code": "BBA-402", "name": "Operations Management"},
+            {"code": "BBA-403", "name": "Financial Management"},
+            {"code": "BBA-404", "name": "Business Research methodology"},
+            {"code": "BBA-405", "name": "Business env. & public policy or International Business"},
+            {"code": "BBA-406", "name": "Enterprise System and platforms"},
+            {"code": "BBA-407", "name": "Design Thinking and Innovation"}
+          ]
+        },
+        "5": {
+          "title": "Semester V",
+          "subjects": [
+            {"code": "BBA-501", "name": "Strategic Management"},
+            {"code": "BBA-502", "name": "Logistics and Supply Chain Management"},
+            {"code": "BBA-503", "name": "Discipline Specific Electives - I"},
+            {"code": "BBA-504", "name": "Discipline Specific Electives - II"},
+            {"code": "BBA-505", "name": "Internship / Capstone Project"},
+            {"code": "BBA-506", "name": "Major Project [Evaluation in sixth semester]"},
+            {"code": "BBA-507", "name": "Discipline Specific Elective (Audit Course)"}
+          ]
+        },
+        "6": {
+          "title": "Semester VI",
+          "subjects": [
+            {"code": "BBA-601", "name": "Project Management"},
+            {"code": "BBA-602", "name": "Business Taxation"},
+            {"code": "BBA-603", "name": "Discipline Specific Electives - III"},
+            {"code": "BBA-604", "name": "Discipline Specific Electives - IV"},
+            {"code": "BBA-605", "name": "Corporate Governance"},
+            {"code": "BBA-606", "name": "Major Project [Initiated in 5th Semester]"},
+            {"code": "BBA-607", "name": "Discipline Specific Elective (Audit Course)"}
+          ]
+        }
+      }
+    },
+    "ba": {
+      "name": "Bachelor of Arts (B.A. - English / Marathi Medium)",
+      "seats": 60,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "BA-101", "name": "Communication Skills in English"},
+            {"code": "BA-102", "name": "Indian Constitution I"},
+            {"code": "BA-103", "name": "Indian Knowledge System Series (Generic) - I"},
+            {"code": "BA-104", "name": "Economics"},
+            {"code": "BA-105", "name": "History"},
+            {"code": "BA-106", "name": "Geography"},
+            {"code": "BA-107", "name": "English Literature"},
+            {"code": "BA-108", "name": "Psychology"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "BA-201", "name": "Introduction to Communication Skills in English II"},
+            {"code": "BA-202", "name": "Academic and Business Writing"},
+            {"code": "BA-203", "name": "Economics"},
+            {"code": "BA-204", "name": "History"},
+            {"code": "BA-205", "name": "Geography"},
+            {"code": "BA-206", "name": "English Literature"},
+            {"code": "BA-207", "name": "Psychology"},
+            {"code": "BA-208", "name": "Field Project"}
+          ]
+        }
+      }
+    },
+    "bcom": {
+      "name": "Bachelor of Commerce (B.Com.)",
+      "seats": 360,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "BCOM-101", "name": "Commerce- I (Introduction to Business)"},
+            {"code": "BCOM-102", "name": "Accountancy & Financial Management- I"},
+            {"code": "BCOM-103", "name": "Microeconomics- I"},
+            {"code": "BCOM-104", "name": "Introduction to Environment"},
+            {"code": "BCOM-105", "name": "IT_Fundamentals of Computers"},
+            {"code": "BCOM-106", "name": "Stress Management"},
+            {"code": "BCOM-107", "name": "Open Elective in Accounting Paper- I"},
+            {"code": "BCOM-108", "name": "Open Elective in Accounting Paper- II"},
+            {"code": "BCOM-109", "name": "Vocational Skills in Accounting Paper - I"},
+            {"code": "BCOM-110", "name": "Vocational Skills in Accounting Paper - II"},
+            {"code": "BCOM-111", "name": "Recent Trends in Accounting- I"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "BCOM-201", "name": "Commerce-II (Introduction to Service Sector)"},
+            {"code": "BCOM-202", "name": "Accountancy & Financial Management- II"},
+            {"code": "BCOM-203", "name": "Microeconomics- II"},
+            {"code": "BCOM-204", "name": "Commerce-I Introduction to Business Law- I"},
+            {"code": "BCOM-205", "name": "Academic and Business Writing"},
+            {"code": "BCOM-206", "name": "Effective Communication"},
+            {"code": "BCOM-207", "name": "Social Media Marketing"},
+            {"code": "BCOM-208", "name": "Accounting Paper- I"},
+            {"code": "BCOM-209", "name": "Vocational Skills in Accounting Paper - III"},
+            {"code": "BCOM-210", "name": "Vocational Skills in Accounting Paper - IV"},
+            {"code": "BCOM-211", "name": "Recent Trends in Accounting- II"}
+          ]
+        }
+      }
+    },
+    "baf": {
+      "name": "Bachelor of Commerce Accounting & Finance (B.A.F.)",
+      "seats": 60,
+      "pattern": "NEP 2020 (100 Marks - 60:40 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "BAF-101", "name": "Financial Accounting I"},
+            {"code": "BAF-102", "name": "Auditing I"},
+            {"code": "BAF-103", "name": "Introduction to Environment"},
+            {"code": "BAF-104", "name": "IT_Fundamentals of Computers"},
+            {"code": "BAF-105", "name": "Vocational Skills in Accounting & Finance -I"},
+            {"code": "BAF-106", "name": "Vocational Skills in Accounting & Finance -II"},
+            {"code": "BAF-107", "name": "Business Communication Skills I"},
+            {"code": "BAF-108", "name": "Indian Constitution I"},
+            {"code": "BAF-109", "name": "Indian Knowledge System Series (Generic) - I"},
+            {"code": "BAF-110", "name": "Field Project"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "BAF-201", "name": "Financial Accounting II"},
+            {"code": "BAF-202", "name": "Auditing II"},
+            {"code": "BAF-203", "name": "Minor in Accounting and Finance"},
+            {"code": "BAF-204", "name": "Academic and Business Writing"},
+            {"code": "BAF-205", "name": "Ethics in Practice"},
+            {"code": "BAF-206", "name": "Vocational Skills in Accounting & Finance -III"},
+            {"code": "BAF-207", "name": "Vocational Skills in Accounting & Finance -IV"},
+            {"code": "BAF-208", "name": "Business Communication Skills II"},
+            {"code": "BAF-209", "name": "Indian Constitution I"},
+            {"code": "BAF-210", "name": "Field Project"}
+          ]
+        }
+      }
+    },
+    "msc_it": {
+      "name": "Master of Science - Information Technology (M.Sc. IT)",
+      "seats": 20,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "58011", "name": "Data science"},
+            {"code": "58021", "name": "Soft computing techniques"},
+            {"code": "58031", "name": "Cloud computing"},
+            {"code": "58053", "name": "Image processing"},
+            {"code": "58091", "name": "Research methodology"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "58012", "name": "Big data analytics"},
+            {"code": "58022", "name": "Modern networking"},
+            {"code": "58032", "name": "Micro services architecture"},
+            {"code": "58054", "name": "Computer vision"},
+            {"code": "58092", "name": "Field project"}
+          ]
+        },
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "58013", "name": "Advanced ai + Practical"},
+            {"code": "58023", "name": "Machine learning + Practical"},
+            {"code": "58033", "name": "Storage as a service"},
+            {"code": "58055", "name": "Security operations center (Pr) (606B)"},
+            {"code": "58093", "name": "Research project"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "58014", "name": "Blockchain + Practical"},
+            {"code": "58024", "name": "Deep learning + Practical"},
+            {"code": "58034", "name": "Cyber forensics (Pr) (615B)"},
+            {"code": "58056", "name": "Research Project"}
+          ]
+        }
+      }
+    },
+    "mcom": {
+      "name": "Master of Commerce - Advanced Accountancy (M.Com.)",
+      "seats": 60,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "59311", "name": "Advanced Cost And Management Accounting"},
+            {"code": "59321", "name": "Direct And Indirect Taxation (Income Tax)"},
+            {"code": "59331", "name": "Advanced Financial Accounting"},
+            {"code": "59341", "name": "Advanced Trends in Accounting"},
+            {"code": "59351", "name": "Mutual Fund Management & Wealth Management"},
+            {"code": "59391", "name": "Research Methodology"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "59312", "name": "Advanced cost accounting"},
+            {"code": "59322", "name": "Corporate finance"},
+            {"code": "59332", "name": "Direct and indirect taxation (GST)"},
+            {"code": "59342", "name": "Advanced trends in accounting - II"},
+            {"code": "59371", "name": "Risk management"},
+            {"code": "59392", "name": "Field project"}
+          ]
+        },
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "59313", "name": "Corporate Financial Accounting"},
+            {"code": "59323", "name": "Advanced Auditing"},
+            {"code": "59333", "name": "Financial Services"},
+            {"code": "59343", "name": "Advanced Trends in Accounting – III"},
+            {"code": "59372", "name": "Operations Research"},
+            {"code": "59393", "name": "Project"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "59314", "name": "Advanced Financial Management"},
+            {"code": "59324", "name": "International Financial Reporting Standards"},
+            {"code": "59334", "name": "Personal Financial Planning"},
+            {"code": "59344", "name": "Auditing And Assurance (acc Ethics And Corp Gov.)"},
+            {"code": "59373", "name": "Project"}
+          ]
+        }
+      }
+    },
+    "msc_chemistry": {
+      "name": "Master of Science - Organic Chemistry (M.Sc.)",
+      "seats": 20,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "semesters": {
+        "1": {
+          "title": "Semester I",
+          "subjects": [
+            {"code": "56211", "name": "Inorganic chemistry-I"},
+            {"code": "56221", "name": "Organic chemistry-I"},
+            {"code": "56231", "name": "Analytical chemistry-I"},
+            {"code": "56221", "name": "Chemistry practical-I (organic and analytical)"},
+            {"code": "56252", "name": "Physical chemistry and inorganic chemistry"},
+            {"code": "56291", "name": "Research methodology"}
+          ]
+        },
+        "2": {
+          "title": "Semester II",
+          "subjects": [
+            {"code": "56212", "name": "Inorganic chemistry-II"},
+            {"code": "56222", "name": "Organic chemistry-II"},
+            {"code": "56232", "name": "Analytical chemistry-II"},
+            {"code": "56222", "name": "Chemistry practical-II (organic and analytical)"},
+            {"code": "56253", "name": "Physical chemistry and inorganic chemistry"},
+            {"code": "56292", "name": "Industrial training/field project"}
+          ]
+        },
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "56213", "name": "Theoretical organic chemistry-I"},
+            {"code": "56223", "name": "Synthetic organic chemistry-I"},
+            {"code": "56233", "name": "Natural products and spectroscopy-I"},
+            {"code": "56234", "name": "Organic chemistry practical"},
+            {"code": "56254", "name": "Biogenesis and green chemistry + practical chem"},
+            {"code": "56293", "name": "Research project"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "56214", "name": "Theoretical organic chemistry-II"},
+            {"code": "56224", "name": "Synthetic organic chemistry-II"},
+            {"code": "56234", "name": "Bio organic chemistry"},
+            {"code": "56235", "name": "Natural products and heterocyclic chemistry-II"},
+            {"code": "56255", "name": "Research project"}
+          ]
+        }
+      }
+    },
+    "ma_history": {
+      "name": "Master of Arts - History (M.A.)",
+      "seats": 60,
+      "pattern": "100 Marks (50:50 Pattern)",
+      "semesters": {
+        "3": {
+          "title": "Semester III",
+          "subjects": [
+            {"code": "50413", "name": "Introduction to Philosophy of History"},
+            {"code": "50423", "name": "History of Presidents and Policies of USA"},
+            {"code": "50433", "name": "Historical Perspectives on the Indian Constitution"},
+            {"code": "50443", "name": "History of Maharashtra in The 19th and 20th Cent."},
+            {"code": "50458", "name": "Socio- Economic His. of Marathas (1630CE-1818 CE)"},
+            {"code": "50493", "name": "Research Project"}
+          ]
+        },
+        "4": {
+          "title": "Semester IV",
+          "subjects": [
+            {"code": "50414", "name": "His. of the Indian national mov. (1857ce – 1947ce)"},
+            {"code": "50424", "name": "Emancipatory movements in the modern world"},
+            {"code": "50434", "name": "History of Buddhism in India"},
+            {"code": "50444", "name": "Social issues in modern India"},
+            {"code": "50494", "name": "Research project"}
+          ]
+        }
+      }
+    }
+  }
+}

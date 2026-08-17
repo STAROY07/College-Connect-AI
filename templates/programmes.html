@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Programmes Offered | Vande Mataram Degree College{% endblock %}
+{% block content %}
+
+<div class="hero-banner" style="padding:22px 28px;">
+  <div>
+    <h2>Programmes Offered</h2>
+    <p>Undergraduate, Postgraduate, and AICTE-approved programmes affiliated to the University of Mumbai.</p>
+  </div>
+</div>
+
+<!-- UG Programmes -->
+<div class="section-hd" style="margin-top:24px;">
+  <h2>Undergraduate (UG) Programmes</h2>
+  <p>Three-year degree programmes. Eligibility: 10+2 (HSC) pass.</p>
+</div>
+<div class="grid-3" style="margin-bottom:28px;">
+  {% for p in ug %}
+  <div class="card" style="border-top:3px solid var(--accent);">
+    <div class="card-hd">
+      <h3 style="font-size:16px;font-weight:700;color:var(--text-head);">{{ p.name }}</h3>
+      <span class="badge badge-blue">UG</span>
+    </div>
+    {% if p.short_name %}<div style="font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px;">{{ p.short_name }}</div>{% endif %}
+    {% if p.description %}<p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:12px;">{{ p.description }}</p>{% endif %}
+    {% if p.eligibility %}<div style="font-size:12px;margin-bottom:8px;"><span style="font-weight:600;color:var(--text-head);">Eligibility:</span> {{ p.eligibility }}</div>{% endif %}
+    {% if p.duration %}<div style="font-size:12px;margin-bottom:8px;"><span style="font-weight:600;color:var(--text-head);">Duration:</span> {{ p.duration }}</div>{% endif %}
+    {% if p.intake %}<div style="font-size:12px;"><span style="font-weight:600;color:var(--text-head);">Intake:</span> {{ p.intake }} seats</div>{% endif %}
+    {% if p.subjects %}
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--border);">
+      <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Core Subjects</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;">
+        {% for s in p.subjects[:5] %}
+        <span class="badge badge-gray">{{ s }}</span>
+        {% endfor %}
+        {% if p.subjects|length > 5 %}
+        <span class="badge badge-gray">+{{ p.subjects|length - 5 }} more</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<!-- PG Programmes -->
+{% if pg %}
+<div class="section-hd">
+  <h2>Postgraduate (PG) Programmes</h2>
+  <p>Two-year master's degree programmes. Eligibility: Relevant UG degree pass.</p>
+</div>
+<div class="grid-3" style="margin-bottom:28px;">
+  {% for p in pg %}
+  <div class="card" style="border-top:3px solid var(--success);">
+    <div class="card-hd">
+      <h3 style="font-size:16px;font-weight:700;color:var(--text-head);">{{ p.name }}</h3>
+      <span class="badge badge-green">PG</span>
+    </div>
+    {% if p.description %}<p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:12px;">{{ p.description }}</p>{% endif %}
+    {% if p.eligibility %}<div style="font-size:12px;margin-bottom:8px;"><span style="font-weight:600;color:var(--text-head);">Eligibility:</span> {{ p.eligibility }}</div>{% endif %}
+    {% if p.duration %}<div style="font-size:12px;"><span style="font-weight:600;color:var(--text-head);">Duration:</span> {{ p.duration }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- AICTE / Vocational -->
+{% if aicte %}
+<div class="section-hd">
+  <h2>AICTE / Vocational Programmes</h2>
+  <p>Industry-focused programmes with practical skill development components.</p>
+</div>
+<div class="grid-3" style="margin-bottom:28px;">
+  {% for p in aicte %}
+  <div class="card" style="border-top:3px solid var(--gold);">
+    <div class="card-hd">
+      <h3 style="font-size:16px;font-weight:700;color:var(--text-head);">{{ p.name }}</h3>
+      <span class="badge badge-gold">AICTE</span>
+    </div>
+    {% if p.description %}<p style="font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:12px;">{{ p.description }}</p>{% endif %}
+    {% if p.eligibility %}<div style="font-size:12px;margin-bottom:8px;"><span style="font-weight:600;color:var(--text-head);">Eligibility:</span> {{ p.eligibility }}</div>{% endif %}
+    {% if p.duration %}<div style="font-size:12px;"><span style="font-weight:600;color:var(--text-head);">Duration:</span> {{ p.duration }}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="alert alert-info">
+  <span>ℹ️</span>
+  <div>All programmes are affiliated to the <strong>University of Mumbai</strong>. For detailed syllabus and exam patterns, please visit the college office or ask the <a href="{{ url_for('home') }}">AI Assistant</a>.</div>
+</div>
+
+{% endblock %}

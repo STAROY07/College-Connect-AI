@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Important Updates & Portals | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>Important Updates & Official Portals</h2>
+  <p>Latest academic notices, government scholarship portals, and examination announcements</p>
+</div>
+
+<div class="grid-2">
+  {% for u in updates %}
+  <div class="card" style="border-left: 4px solid var(--accent); display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div class="card-header">
+        <span class="badge badge-primary">{{ u.category }}</span>
+        <span style="font-size: 12px; color: var(--text-muted);">{{ u.date_added }}</span>
+      </div>
+
+      <h3 style="font-size: 17px; color: var(--primary-dark); margin-bottom: 8px;">{{ u.title }}</h3>
+      <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px;">{{ u.content }}</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--border); font-size: 12px;">
+      <span style="color: var(--text-muted);"><strong>Source:</strong> {{ u.source }}</span>
+      {% if u.url %}
+      <a href="{{ u.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Visit Portal &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

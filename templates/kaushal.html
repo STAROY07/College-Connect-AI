@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}VMDC Kaushal Centre | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>VMDC Kaushal Centre</h2>
+  <p>20 Specialized Job-Oriented KLiC Certification Courses (120 Hours Duration)</p>
+</div>
+
+<!-- Kaushal Overview Banner -->
+<div style="background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: #ffffff; padding: 24px; border-radius: var(--radius-lg); margin-bottom: 28px; box-shadow: var(--shadow-md);">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    <div>
+      <span class="badge" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 8px;">Vocational Skill Certification</span>
+      <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 6px;">{{ kaushal.centre_name }}</h3>
+      <p style="font-size: 14px; opacity: 0.9;">{{ kaushal.overview }}</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); padding: 14px 20px; border-radius: var(--radius-md); text-align: center; border: 1px solid rgba(255,255,255,0.25);">
+      <div style="font-size: 13px; font-weight: 600;">Programme Fee</div>
+      <div style="font-size: 22px; font-weight: 800;">{{ kaushal.fee }}</div>
+      <div style="font-size: 11px; opacity: 0.85;">{{ kaushal.duration }}</div>
+    </div>
+  </div>
+
+  <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 13px; display: flex; align-items: center; gap: 8px;">
+    <span>🎁</span>
+    <span><strong>Scholarship Opportunity:</strong> {{ kaushal.scholarship_note }}</span>
+  </div>
+</div>
+
+<!-- 20 Courses Grid -->
+<div class="grid-3">
+  {% for c in kaushal.courses %}
+  <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div class="card-header">
+        <span class="badge badge-primary">{{ c.category }}</span>
+        <span class="badge badge-gold">120 Hours</span>
+      </div>
+      <h4 style="font-size: 16px; color: var(--primary-dark); margin-bottom: 8px;">{{ loop.index }}. {{ c.name }}</h4>
+      <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Hands-on training, live project exercises, and industry-standard practical skill development.</p>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--border); font-size: 13px;">
+      <span style="font-weight: 700; color: var(--primary-dark);">Fee: Rs. 6000/-</span>
+      <span style="color: var(--success); font-weight: 600; font-size: 12px;">JMF Aid Available</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

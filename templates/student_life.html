@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Student Life & Committees | Vande Mataram Degree College{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h2>Student Life & Academic Committees</h2>
+  <p>NSS, Gymkhana, Students' Council, Cultural Festivals, and Campus Forums</p>
+</div>
+
+<!-- Highlight Cards: NSS & Gymkhana & Canteen -->
+<div class="grid-3" style="margin-bottom: 28px;">
+  <!-- NSS Card -->
+  <div class="card" id="nss" style="border-top: 4px solid var(--success);">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🤝 National Service Scheme (NSS)</h3>
+      <span class="badge badge-success">10 Grace Marks</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px;">{{ student_life.nss.aim }}</p>
+    <div style="background: var(--bg-subtle); padding: 10px 12px; border-radius: var(--radius-md); font-size: 12px; margin-bottom: 10px;">
+      <strong>Key Activities:</strong> {{ student_life.nss.activities | join(', ') }}
+    </div>
+    <div style="font-size: 12px; color: var(--primary-light); font-weight: 600;">
+      ✨ {{ student_life.nss.benefit }}
+    </div>
+  </div>
+
+  <!-- Gymkhana & Sports -->
+  <div class="card" id="gymkhana" style="border-top: 4px solid var(--accent);">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🏅 Gymkhana & Sports</h3>
+      <span class="badge badge-primary">Fitness & Sports</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px;">{{ student_life.gymkhana.facilities }}</p>
+    <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px;">
+      <strong>Outdoor Games:</strong> {{ student_life.gymkhana.outdoor_sports | join(', ') }}
+    </div>
+    <div style="font-size: 12px; color: var(--text-muted);">
+      <strong>Indoor Games:</strong> {{ student_life.gymkhana.indoor_sports | join(', ') }}
+    </div>
+  </div>
+
+  <!-- Canteen & Job Melas -->
+  <div class="card" style="border-top: 4px solid var(--accent-gold);">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🥗 Pure Veg Canteen & Jobs</h3>
+      <span class="badge badge-gold">Campus Life</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 10px;"><strong>Canteen:</strong> {{ student_life.canteen.features }}</p>
+    <div style="background: var(--bg-subtle); padding: 10px 12px; border-radius: var(--radius-md); font-size: 12px;">
+      <strong>Job Melas:</strong> {{ student_life.job_melas.features }}
+    </div>
+  </div>
+</div>
+
+<!-- Student Council & Cultural Activities -->
+<div class="grid-2" style="margin-bottom: 28px;">
+  <!-- Students' Council -->
+  <div class="card">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🏛️ Students' Council (Talent Search Parade)</h3>
+      <span class="badge badge-primary">Merit Based</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">{{ student_life.student_council.selection_policy }}</p>
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--text-secondary);">
+      {% for m in student_life.student_council.composition %}
+      <li>{{ m }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Cultural Festival PRERNOTSAV -->
+  <div class="card">
+    <div class="card-header">
+      <h3 style="font-size: 17px; color: var(--primary-dark);">🎭 Cultural Festival (PRERNOTSAV)</h3>
+      <span class="badge badge-gold">Since 2009</span>
+    </div>
+    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 12px;">Intra-collegiate festival organized annually with enthusiasm across diverse artistic categories.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;">
+      {% for act in student_life.cultural_and_fests.activities %}
+      <span class="badge" style="background: var(--bg-subtle); color: var(--text-secondary);">{{ act }}</span>
+      {% endfor %}
+    </div>
+    <div style="font-size: 12px; color: var(--text-muted);">
+      <strong>Annual Celebrations:</strong> {{ student_life.cultural_and_fests.annual_celebrations | join(', ') }}
+    </div>
+  </div>
+</div>
+
+<!-- Academic Committees Directory (40+ Committees) -->
+<div class="card" style="margin-bottom: 28px;">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">Academic Committees & Forums (Section 4 Handbook)</h3>
+    <span class="badge badge-primary">40+ Active Committees</span>
+  </div>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px;">
+    {% for c in student_life.academic_committees %}
+    <div style="background: var(--bg-subtle); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 13px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+      <span style="color: var(--primary-light); font-weight: 700;">•</span>
+      <span>{{ c }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- National & International Days Calendar -->
+<div class="card">
+  <div class="card-header">
+    <h3 style="font-size: 18px; color: var(--primary-dark);">National and International Days Calendar</h3>
+    <span class="badge badge-success">Official Observances</span>
+  </div>
+
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.</th>
+          <th>Day / Event</th>
+          <th>Date of Celebration</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in student_life.national_and_international_days %}
+        <tr>
+          <td>{{ d.sr }}</td>
+          <td><strong>{{ d.day }}</strong></td>
+          <td><span class="badge badge-primary">{{ d.date }}</span></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
