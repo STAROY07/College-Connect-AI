@@ -47,6 +47,16 @@
   --nav-h:  64px;
   --font:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --trans:  all 0.2s ease;
+
+  /* Aliases for universal compatibility */
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --text-primary: var(--text-head);
+  --text-secondary: var(--text-body);
+  --primary-light: var(--accent);
+  --accent-gold: var(--gold);
 }
 
 /* ── Reset ─────────────────────────────────────────────────── */
@@ -653,7 +663,87 @@ footer {
   .nav-search { display: none; }
 }
 
-@media (max-width: 480px) {
-  .hero-banner { padding: 20px 16px; }
-  .card { padding: 16px; }
+/* ── Tabs & Nav Elements ─────────────────────────────────────── */
+.admin-tabs, .tabs-container {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding: 4px 4px 8px 4px;
+  border-bottom: 1px solid var(--border);
+  scrollbar-width: thin;
+}
+.tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--text-muted);
+  border-radius: var(--r-full);
+  transition: var(--trans);
+  font-family: var(--font);
+  white-space: nowrap;
+  box-shadow: var(--shadow-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tab-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary-mid);
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+.tab-btn.active {
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(26,58,110,0.25);
+}
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out;
+}
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Section & Card Headers ──────────────────────────────────── */
+.section-header {
+  margin-bottom: 24px;
+}
+.section-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-head);
+  letter-spacing: -0.02em;
+}
+.section-header p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }

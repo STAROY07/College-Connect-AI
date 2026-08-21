@@ -1,6 +1,7 @@
 {
   "admin_username": "admin",
-  "admin_password_hash": "scrypt:32768:8:1$O1PhofkAR0VfCgJB$f22a6aeea54186f048848e37de0f5cbe000b629e7859081ed93dc784416a6cb99da7e73c46bd3e22c2fde5a0ec76e3e38d8e563ecac2cb444cee7c2839817e5a",
+  "admin_password_hash": "scrypt:32768:8:1$yXIJudTEKtmzB4j6$f13e2ffe5e8f264153f7768e35947f6a6bd88ede01b3294e58ccf503496e634515136e22eb2d97bfc3adc7a332ac52f347e332d17f25b37e96abc3c9918a84be",
+  "recovery_key": "VMDC-RECOVER-2026",
   "session_secret_key": "vmdc-college-connect-super-secret-2026-xK9mN2pQ",
-  "_note": "Default password is admin@vmdc2026. Run generate_hash.py to create a new hash after changing the password."
+  "_note": "Default password is admin@vmdc2026. Master recovery key is VMDC-RECOVER-2026."
 }

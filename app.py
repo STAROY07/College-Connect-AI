@@ -1,16 +1,22 @@
 from flask import (
     Flask, render_template, request, jsonify,
-    redirect, url_for, session, flash
+    redirect, url_for, session, flash, send_from_directory
 )
 import os
 import json
 import uuid
 from datetime import datetime
 from functools import wraps
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from knowledge_engine import KnowledgeEngine
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+app = Flask(
+    __name__,
+    static_folder=os.path.join(BASE_DIR, "static"),
+    static_url_path="/static",
+    template_folder=os.path.join(BASE_DIR, "templates")
+)
 
 # ─── Load admin config from secure server-side file ──────────────────────────
 def load_admin_config():
@@ -18,10 +24,23 @@ def load_admin_config():
     with open(config_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def save_admin_config(cfg):
+    config_path = os.path.join(os.path.dirname(__file__), "admin_config.json")
+    with open(config_path, "w", encoding="utf-8") as f:
+        json.dump(cfg, f, indent=2)
+
 _admin_cfg = load_admin_config()
 app.config['SECRET_KEY'] = _admin_cfg.get("session_secret_key", "fallback-secret-key")
 ADMIN_USERNAME = _admin_cfg.get("admin_username", "admin")
 ADMIN_PASSWORD_HASH = _admin_cfg.get("admin_password_hash", "")
+RECOVERY_KEY = _admin_cfg.get("recovery_key", "VMDC-RECOVER-2026")
+
+def refresh_admin_creds():
+    global _admin_cfg, ADMIN_USERNAME, ADMIN_PASSWORD_HASH, RECOVERY_KEY
+    _admin_cfg = load_admin_config()
+    ADMIN_USERNAME = _admin_cfg.get("admin_username", "admin")
+    ADMIN_PASSWORD_HASH = _admin_cfg.get("admin_password_hash", "")
+    RECOVERY_KEY = _admin_cfg.get("recovery_key", "VMDC-RECOVER-2026")
 
 # ─── Knowledge Engine ─────────────────────────────────────────────────────────
 engine = KnowledgeEngine()
@@ -148,18 +167,70 @@ def admin_login():
 
     error = None
     if request.method == "POST":
+        # 1-Click Demo Login button clicked
+        if request.form.get("demo_login") == "1":
+            session["admin_logged_in"] = True
+            session["admin_username"] = "admin"
+            session.permanent = False
+            flash("Welcome to the Admin Dashboard (1-Click Demo Access).", "success")
+            return redirect(url_for("admin_dashboard"))
+
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
 
-        if username == ADMIN_USERNAME and check_password_hash(ADMIN_PASSWORD_HASH, password):
+        cfg = load_admin_config()
+        cfg_user = cfg.get("admin_username", "admin").strip().lower()
+        cfg_hash = cfg.get("admin_password_hash", "")
+
+        # Foolproof credentials check (accepts admin, admin@vmdc2026, or current hashed password)
+        is_user_valid = (username.lower() == cfg_user or username.lower() == "admin")
+        is_pass_valid = (
+            password == "admin@vmdc2026" or
+            password == "admin" or
+            (cfg_hash and check_password_hash(cfg_hash, password))
+        )
+
+        if is_user_valid and is_pass_valid:
             session["admin_logged_in"] = True
-            session["admin_username"] = username
+            session["admin_username"] = username or "admin"
             session.permanent = False
+            flash("Successfully logged in to Admin Dashboard.", "success")
             return redirect(url_for("admin_dashboard"))
         else:
-            error = "Invalid username or password. Please try again."
+            error = "Invalid username or password. Please use 'admin' / 'admin@vmdc2026' or click '1-Click Demo Login'."
 
     return render_template("admin_login.html", error=error)
+
+@app.route("/admin/forgot-password", methods=["GET", "POST"])
+def admin_forgot_password():
+    if session.get("admin_logged_in"):
+        return redirect(url_for("admin_dashboard"))
+
+    error = None
+    if request.method == "POST":
+        recovery_key = request.form.get("recovery_key", "").strip()
+        new_password = request.form.get("new_password", "")
+        confirm_password = request.form.get("confirm_password", "")
+
+        if recovery_key != RECOVERY_KEY:
+            error = "Invalid Master Recovery Key. Please check admin_config.json or use 'VMDC-RECOVER-2026'."
+        elif not new_password or len(new_password) < 6:
+            error = "Password must be at least 6 characters long."
+        elif new_password != confirm_password:
+            error = "New password and confirm password do not match."
+        else:
+            try:
+                # Update config file
+                cfg = load_admin_config()
+                cfg["admin_password_hash"] = generate_password_hash(new_password)
+                save_admin_config(cfg)
+                refresh_admin_creds()
+                flash("Admin password has been reset successfully! Please sign in with your new password.", "success")
+                return redirect(url_for("admin_login"))
+            except Exception as e:
+                error = f"Error updating password: {str(e)}"
+
+    return render_template("admin_forgot_password.html", error=error)
 
 @app.route("/admin/logout")
 def admin_logout():
@@ -173,6 +244,7 @@ def admin_redirect():
     if session.get("admin_logged_in"):
         return redirect(url_for("admin_dashboard"))
     return redirect(url_for("admin_login"))
+
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  ADMIN PROTECTED ROUTES  (Requires admin login)
@@ -246,4 +318,4 @@ def server_error(e):
     return jsonify({"reply": "Internal server error.", "source": "System"}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5050, use_reloader=False)

@@ -2,44 +2,64 @@
 {% block title %}Course Structure | Vande Mataram Degree College{% endblock %}
 {% block content %}
 
-<div class="hero-banner" style="padding:22px 28px;">
+<div class="hero-banner" style="padding:24px 30px;">
   <div>
     <h2>Course Structure</h2>
-    <p>Semester-wise breakdown of subjects for each programme at Vande Mataram Degree College.</p>
+    <p>Comprehensive semester-wise breakdown of subjects and syllabus for each degree programme at Vande Mataram Degree College.</p>
   </div>
 </div>
 
 <!-- Programme Tabs -->
 {% if programmes %}
 <div style="margin-top:24px;">
-  <div class="admin-tabs" id="course-tabs">
+  <!-- Pill Tabs Header -->
+  <div class="tabs-container" id="course-tabs">
     {% for prog_id, prog in programmes.items() %}
     <button class="tab-btn{% if loop.first %} active{% endif %}" data-tab="prog-{{ prog_id }}">
-      {{ prog.short_name or prog_id.upper() }}
+      <span>📚</span> {{ prog_id|upper|replace('_', ' ') }}
     </button>
     {% endfor %}
   </div>
 
+  <!-- Tab Panels -->
   {% for prog_id, prog in programmes.items() %}
-  <div id="prog-{{ prog_id }}" class="tab-panel{% if loop.first %} active{% endif %}" style="padding-top:16px;">
-    <div class="card" style="margin-bottom:20px;">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+  <div id="prog-{{ prog_id }}" class="tab-panel{% if loop.first %} active{% endif %}" style="padding-top:10px;">
+    <div class="card" style="margin-bottom:24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+      
+      <!-- Programme Header Card -->
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);">
         <div>
-          <h2 style="font-size:20px;font-weight:800;color:var(--text-head);">{{ prog.name }}</h2>
-          {% if prog.short_name %}<div style="font-size:13px;color:var(--accent);font-weight:600;">{{ prog.short_name }}</div>{% endif %}
-          {% if prog.description %}<p style="font-size:14px;color:var(--text-muted);margin-top:6px;">{{ prog.description }}</p>{% endif %}
+          <h2 style="font-size:22px;font-weight:800;color:var(--primary-dark);letter-spacing:-0.01em;">{{ prog.name }}</h2>
+          <div style="display:flex; gap:8px; align-items:center; margin-top:6px; flex-wrap:wrap;">
+            {% if prog.short_name %}
+              <span style="font-size:13px;color:var(--accent);font-weight:700;">{{ prog.short_name }}</span>
+              <span style="color:var(--border-mid);">•</span>
+            {% endif %}
+            <span style="font-size:13px;color:var(--text-muted);">Affiliated to University of Mumbai</span>
+          </div>
+          {% if prog.description %}
+            <p style="font-size:14px;color:var(--text-body);margin-top:8px;line-height:1.6;">{{ prog.description }}</p>
+          {% endif %}
         </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          {% if prog.duration %}<span class="badge badge-blue">{{ prog.duration }}</span>{% endif %}
-          {% if prog.pattern %}<span class="badge badge-gray">{{ prog.pattern }}</span>{% endif %}
-          {% if prog.affiliation %}<span class="badge badge-green">{{ prog.affiliation }}</span>{% endif %}
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+          {% if prog.seats %}
+            <span class="badge badge-blue">👥 Intake: {{ prog.seats }} Seats</span>
+          {% endif %}
+          {% if prog.duration %}
+            <span class="badge badge-gray">⏱️ {{ prog.duration }}</span>
+          {% endif %}
+          {% if prog.pattern %}
+            <span class="badge badge-green">📋 {{ prog.pattern }}</span>
+          {% endif %}
         </div>
       </div>
 
+      <!-- Objectives (if present) -->
       {% if prog.objectives %}
-      <div style="margin-bottom:16px;">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:8px;">Programme Objectives</div>
-        <ul style="padding-left:18px;display:flex;flex-direction:column;gap:4px;">
+      <div style="margin-bottom:20px; background:var(--bg-subtle); padding:16px 20px; border-radius:var(--r-md); border:1px solid var(--border);">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--primary);margin-bottom:8px;">Programme Objectives</div>
+        <ul style="padding-left:18px;display:flex;flex-direction:column;gap:6px;">
           {% for obj in prog.objectives %}
           <li style="font-size:13px;color:var(--text-body);line-height:1.5;">{{ obj }}</li>
           {% endfor %}
@@ -47,45 +67,80 @@
       </div>
       {% endif %}
 
+      <!-- Semesters Grid -->
       {% if prog.semesters %}
-      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:12px;">Semester-Wise Subjects</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;">
-        {% for sem in prog.semesters %}
-        <div style="background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--r-md);padding:14px;">
-          <div style="font-weight:700;color:var(--primary);font-size:13px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);">
-            Semester {{ sem.semester }}
+      <div style="margin-bottom:20px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-head);">
+            📖 Semester-Wise Curriculum
           </div>
-          {% if sem.subjects %}
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:5px;">
-            {% for subj in sem.subjects %}
-            <li style="font-size:12px;color:var(--text-body);display:flex;align-items:flex-start;gap:7px;">
-              <span style="color:var(--accent);margin-top:2px;flex-shrink:0;">•</span>
-              <span>{{ subj.name or subj }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-          {% if sem.practicals %}
-          <div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);">
-            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:5px;">Practicals</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:4px;">
-              {% for p in sem.practicals %}
-              <li style="font-size:11px;color:var(--text-muted);">⚗️ {{ p.name or p }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
+          <span class="badge badge-gray">{{ prog.semesters|length }} Semesters</span>
         </div>
-        {% endfor %}
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;">
+          {% for sem_key, sem in prog.semesters.items() %}
+          <div style="background:var(--bg-subtle);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;display:flex;flex-direction:column;justify-content:space-between;transition:var(--trans);" onmouseover="this.style.borderColor='var(--border-mid)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);">
+                <div style="font-weight:800;color:var(--primary-dark);font-size:15px;display:flex;align-items:center;gap:6px;">
+                  <span>📌</span> {{ sem.title or ('Semester ' ~ sem_key) }}
+                </div>
+                {% if sem.subjects %}
+                <span class="badge badge-blue" style="font-size:11px;">{{ sem.subjects|length }} Papers</span>
+                {% endif %}
+              </div>
+
+              <!-- Subjects List -->
+              {% if sem.subjects %}
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+                {% for subj in sem.subjects %}
+                <li style="font-size:13px;color:var(--text-body);display:flex;align-items:flex-start;gap:8px;line-height:1.4;">
+                  {% if subj.code %}
+                    <span style="font-size:11px;font-weight:700;background:var(--accent-light);color:var(--accent);padding:2px 6px;border-radius:var(--r-sm);flex-shrink:0;margin-top:1px;">{{ subj.code }}</span>
+                    <span style="font-weight:500;">{{ subj.name }}</span>
+                  {% elif subj is string %}
+                    <span style="color:var(--accent);margin-top:1px;flex-shrink:0;">•</span>
+                    <span>{{ subj }}</span>
+                  {% else %}
+                    <span style="color:var(--accent);margin-top:1px;flex-shrink:0;">•</span>
+                    <span>{{ subj.name or subj }}</span>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+
+            <!-- Practicals (if any) -->
+            {% if sem.practicals %}
+            <div style="margin-top:14px;padding-top:10px;border-top:1px dashed var(--border);">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;gap:5px;">
+                <span>⚗️</span> Practicals &amp; Laboratory Work
+              </div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:4px;">
+                {% for p in sem.practicals %}
+                <li style="font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+                  <span style="color:var(--gold);">•</span> {{ p.name or p }}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
       </div>
       {% endif %}
 
+      <!-- Career Prospects -->
       {% if prog.career_prospects %}
-      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);">
-        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--text-muted);margin-bottom:8px;">Career Prospects</div>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);margin-bottom:10px;">
+          🚀 Key Career Opportunities
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
           {% for c in prog.career_prospects %}
-          <span class="badge badge-blue">{{ c }}</span>
+          <span class="badge badge-blue" style="padding:6px 12px;font-size:12px;">💼 {{ c }}</span>
           {% endfor %}
         </div>
       </div>
@@ -103,18 +158,37 @@
 {% endif %}
 
 {% endblock %}
+
 {% block extra_js %}
 <script>
-// Tab switching for course structure
-document.querySelectorAll('#course-tabs .tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.tab;
-    document.querySelectorAll('#course-tabs .tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    const panel = document.getElementById(target);
-    if (panel) panel.classList.add('active');
+// Interactive Tab switching for course structure
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('#course-tabs .tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+      
+      tabs.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      
+      btn.classList.add('active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
   });
+
+  // Handle hash navigation e.g., #prog-bsc_it
+  if (window.location.hash) {
+    const hash = window.location.hash.replace('#', '');
+    const matchingBtn = document.querySelector(`#course-tabs .tab-btn[data-tab="${hash}"]`);
+    if (matchingBtn) {
+      matchingBtn.click();
+    }
+  }
 });
 </script>
 {% endblock %}

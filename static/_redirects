@@ -1,0 +1,2 @@
+/static/*  /:splat  200
+/*  /.netlify/functions/app/:splat  200
